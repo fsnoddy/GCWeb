@@ -21,6 +21,7 @@
 
 /*! Reset and dependencies */
 @import "bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "wet-boew/src/base/bootstrap-overrides/normalize";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/print";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 
@@ -33,8 +34,7 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "wet-boew/src/base/bootstrap-overrides/core-heading";
 @import "baseline/heading";
-@import "wet-boew/src/base/lists/base";
-@import "baseline/lists/lists";
+@import "../common/list/lists";
 @import "wet-boew/src/base/bootstrap-overrides/core";
 @import "wet-boew/src/base/details/base";
 @import "baseline/details";
@@ -79,6 +79,7 @@
 @import "gcweb-menu/base";
 @import "authentication/base";
 @import "header/base";
+@import "main-page-title/base";
 
 /*! Components (CSS type only) */
 @import "bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
@@ -156,6 +157,7 @@
 @import "wet-boew/src/plugins/zebra/base";
 @import "wet-boew/src/plugins/feeds/base";
 @import "wet-boew/src/plugins/paginate/base";
+@import "wet-boew/feeds/base"; // CSS for feeds plugin GC override
 
 // Components GC Theme
 @import "../components/baseline/base";
@@ -165,11 +167,14 @@
 
 @import "../components/gc-dwnld/base";
 @import "../components/gc-nws/base";
-@import "../components/gc-servinfo/base";
+@import "../components/gc-srvinfo/base";
 @import "../components/redacted";
 @import "../components/dshbrd/base";
 @import "../components/triangle-up";
+@import "../components/gc-contributors/base";
 @import "../components/gc-follow-us/base";
+@import "../components/gc-minister/base";
+@import "../components/gc-most-requested/base";
 @import "../components/fd-wdgt";
 @import "../components/pagination/base";
 @import "../components/toc/base";
@@ -186,9 +191,7 @@
 @import "../components/gc-subway/base"; // Provisional CSS for GC subway map menu
 @import "../components/gc-table/base"; // Provisional CSS for GC table
 @import "../components/gc-featured-link/base"; // Provisional CSS for GC featured link
-@import "../components/gc-most-requested/base"; // Provisional CSS for GC most requested
-@import "../components/well-bold/base"; // Provisional CSS that bold every text element in a well component
-@import "../components/gc-feeds/base"; // Provisional CSS for feeds plugin GC override
+@import "../components/bold-content/base"; // Provisional CSS that bold every text element in a well component
 
 
 // Template
@@ -201,16 +204,19 @@
 @import "../templates/campaign/base";
 @import "../templates/news/base";
 @import "../templates/application/base";
+@import "../templates/institutional-landing/base";
 
 
 /*! Core - Utilities */
-@import "helpers/base";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 @import "wet-boew/src/base/accessibility/utilities";
 @import "wet-boew/src/base/proximity/base";
 @import "wet-boew/src/base/bootstrap-4";
 @import "wet-boew/src/base/component";
+@import "../common/text-level-modifiers/base";
+@import "../common/colour/colours";
+@import "../common/spacing/base";
 
 
 /*
@@ -237,7 +243,6 @@
 	@import "baseline/lists/screen-xs-max";
 	@import "gcweb-menu/screen-xs-max";
 	@import "page-details/screen-xs-max";
-	@import "footers/screen-xs-max";
 
 	@import "wet-boew/src/plugins/eqht-css/screen-xs-max";
 	@import "../components/header-rwd/screen-xs-max";
@@ -246,6 +251,7 @@
 
 	@import "../templates/campaign/screen-xs-max";
 	@import "../templates/application/screen-xs-max";
+	@import "../templates/home/screen-xs-max";
 }
 
 /* Small view and under */
@@ -265,10 +271,10 @@
 	@import "../components/gc-table/screen-sm-max"; // Provisional CSS for GC table
 	@import "../components/gc-chckbxrdio/screen-sm-max";
 	@import "wet-boew/src/plugins/tabs/screen-sm-max";
-	@import "../components/gc-servinfo/screen-sm-max";
+	@import "../components/gc-srvinfo/screen-sm-max";
 
 	@import "../templates/home/screen-sm-max";
-	@import "../templates/theme-topic/screen-sm-max";
+	@import "../templates/institutional-landing/screen-sm-max";
 }
 
 /* Medium view and under */
@@ -276,8 +282,6 @@
 	@import "wet-boew/src/base/views/screen-md-max";
 
 	@import "gcweb-menu/screen-md-max";
-
-	@import "../components/header-rwd/screen-md-max";
 }
 
 /* Large view and under */
@@ -312,6 +316,7 @@
 
 	@import "wet-boew/src/base/proximity/screen-sm-min";
 	@import "wet-boew/src/base/views/_bootstrap-4-screen-sm-min";
+	@import "../common/spacing/screen-sm-min";
 }
 
 /* Medium view and over */
@@ -324,12 +329,12 @@
 
 	@import "wet-boew/src/plugins/feeds/screen-md-min";
 	@import "wet-boew/src/plugins/tabs/screen-md-min";
-	@import "../components/social-media-icons/screen-md-min";
+	@import "../components/gc-contributors/screen-md-min";
 	@import "../components/gc-subway/screen-md-min";
-
-	@import "../templates/theme-topic/screen-md-min";
+	@import "../components/gc-most-requested/screen-md-min";
 
 	@import "wet-boew/src/base/proximity/screen-md-min";
+	@import "../common/spacing/screen-md-min";
 }
 
 /* Large view and over */
@@ -343,6 +348,7 @@
 	@import "../components/equalheight/screen-lg-min";
 
 	@import "wet-boew/src/base/proximity/screen-lg-min";
+	@import "../common/spacing/screen-lg-min";
 }
 
 /* Extra-extra-small view */
@@ -357,7 +363,6 @@
 	@import "../components/screen-xxs-max";
 	@import "wet-boew/src/plugins/menu/screen-xxs-max";
 	@import "wet-boew/src/plugins/tables/screen-xxs-max";
-	@import "../components/header-rwd/screen-xxs-max";
 	@import "wet-boew/src/plugins/tabs/screen-xxs-max";
 	@import "../components/tabs/screen-xxs-max";
 }
@@ -367,8 +372,6 @@
 	@import "wet-boew/src/base/views/screen-xs-min-to-screen-xs-max";
 
 	@import "search/screen-xs-min-to-screen-xs-max";
-
-	@import "../components/header-rwd/screen-xs-min-to-screen-xs-max";
 }
 
 /* Small view */
@@ -387,7 +390,6 @@
 
 	@import "gcweb-menu/screen-md-min-to-screen-md-max";
 
-	@import "../components/header-rwd/screen-md-min-to-screen-md-max";
 	@import "../components/equalheight/screen-md-min-to-screen-md-max";
 
 	@import "../templates/home/screen-md-min-to-screen-md-max";

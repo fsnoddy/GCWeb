@@ -14,6 +14,11 @@ $search-gray: #e0e0e0;
 $profile-gray: #eaebed;
 $gray-light: #6f6f6f; // Light grey colour (Bootstrap override).
 
+// Brand variables - Main page title
+$main-page-title-rule-width: 71px;
+$main-page-title-rule-thickness: .18em;
+$main-page-title-rule-color: $border-red;
+
 // Colours for the alert styles
 $alert-danger-color: #d3080c;
 $alert-warning-color: #ee7100;
@@ -70,5 +75,19 @@ $space-0: 0px;
 $space-md: 15px;
 
 $input-color-placeholder: #5c5c5c !important;
+
+// Spacers
+$spacer: 20px;
+$spacers: () !default;
+$spacers: map-merge(
+	(
+		0: 0,
+		1: ($spacer * .25),
+		2: ($spacer * .5),
+		3: $spacer,
+		4: ($spacer * 1.5),
+		5: ($spacer * 3)
+	), $spacers
+);
 
 @import "wet-boew/src/variables";

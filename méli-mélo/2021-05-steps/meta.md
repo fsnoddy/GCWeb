@@ -12,20 +12,23 @@ feature: méli-mélo
   modified: dct:modified
 
 title:
-  en: Steps list
+  en: List steps
   fr: Liste d'étape
 description:
   en: Style ordered list and divs with steps number in circles.
   fr: Mise en style d'une liste ordonnée et de divs avec des numéros d'étape dans un cercle
-modified: 2021-05-21
+modified: 2024-10-31
 componentName: 2021-05-steps
 sponsor: CRA - Christopher Oakes (@christopher-o)
 
 pages:
   examples:
-    - title: Steps
+    - title: List steps
       language: en
       path: index.html
+    - title: Liste des étapes
+      language: fr
+      path: index-fr.html
 
 implementationPlan:
   - due: 2021-06
@@ -38,8 +41,24 @@ implementationPlan:
     what: Have this feature as provisional feature in GCWeb and get TBS to publish guidance on how to use it.
   - due: 2023-12
     what: review updated CSS and governance added to validate usability toward stable
-todos:
-  - Review governance and rationale for the use of both designs
+  - due: 2024-05
+    what: change name of component to better reflect use case
 
+todos:
+  - Finalize design
+
+changes:
+  - date: 2024-06-20
+    description: Reduced excessive spacing for small amount of content. Removed background color for default list steps number (except in striped mode) as was not showing up properly in high contrast mode. Updated governance towards stabilization.
+    departmentImpact: No change from a departmental perspective.
+    publicImpact: Created a cleaner look for items using list steps with a smaller amount of content. Made the numbers more visible for edge case scenarios of print and high contrast.
+  - date: 2024-08-07
+    description: Fixed issue with printing pages as some text would be cut off 
+    departmentImpact: No change from a departmental perspective.
+    publicImpact: Improved look of print document
+  - date: 2024-10-30
+    description: Added customized option to use start attribute for items 2 to 10
+    departmentImpact: No change from a departmental perspective.
+    publicImpact: Enhanced flexibility to better mimic ordered lists using HTML
 output: false
 ---

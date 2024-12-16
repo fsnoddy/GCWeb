@@ -2,25 +2,23 @@
 	"title": "Liste des produits méli-mélo fusionnés",
 	"packages": [
 		{
-			"nom": "2023-10-mount-revelstoke",
+			"nom": "2025-04-nahanni",
 			"libs": [
-				"2022-09-svgimagemap",
-				"2021-05-conjunction",
-				"2021-05-steps",
-				"2023-09-menu",
-				"2023-09-distance-calculator",
-				"2023-09-collection-sort"
+        "2024-10-datatable-utilities",
+				"2024-02-charts",
+        "2024-04-stepsquiz",
+        "2021-05-conjunction",
+        "2021-05-steps",
+        "deprecated"
 			]
 		},
 		{
-			"nom": "2024-09-kejimkujik",
+			"nom": "2025-12-mille-iles",
 			"libs": [
-				"2021-05-conjunction",
-				"2023-09-menu",
-				"2023-09-distance-calculator",
-				"2023-09-collection-sort",
-				"2021-05-steps",
-				"2023-10-clipboard"
+				"2024-10-datatable-utilities",
+        "2021-05-conjunction",
+        "2021-05-steps",
+				"deprecated"
 			]
 		},
 		{
@@ -28,7 +26,8 @@
 			"libs": [
 				"th-canadaday",
 				"th-winterlude",
-				"th-zev"
+				"th-zev",
+				"th-empathy"
 			]
 		}
 	],
@@ -72,6 +71,10 @@
 			"mainpage": "zev.html"
 		},
 		{
+			"nom": "th-empathy",
+			"mainpage": "empathy.html"
+		},
+		{
 			"nom": "2022-09-svgimagemap",
 			"mainpage": "bcmap.html"
 		},
@@ -82,11 +85,25 @@
 		{
 			"nom": "2023-10-clipboard",
 			"mainpage": "index.html"
+		},
+		{
+			"nom": "2024-02-charts",
+			"mainpage": "index.html"
+		},
+		{
+			"nom": "2024-04-stepsquiz",
+			"mainpage": "index.html"
+		},
+		{
+			"nom": "2024-10-datatable-utilities",
+			"mainpage": "index-en.html"
+		},
+	  {
+			"nom": "deprecated",
+			"mainpage": "deprecated.html"
 		}
 	],
 	"future-packages-names": [
-		"nahanni",
-		"mille-iles",
 		"ivvavik",
 		"vuntut",
 		"auyuittuq",

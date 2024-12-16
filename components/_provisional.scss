@@ -11,6 +11,13 @@
 
 .provisional {
 
+	/*
+	*
+	*
+	* START: the following code has been deprecated as of version 16.0.0
+	*
+	*
+	*/
 	/* ------------
 	 * Background color
 	 *
@@ -30,7 +37,7 @@
 	 *
 	 */
 	.bg-img-hdng {
-		background-image: url("../assets/x-blue-line.png");
+		background-image: url("https://www.canada.ca/content/dam/servcan/x-blue-line.png");
 		background-position: right bottom;
 		background-repeat: no-repeat;
 		min-height: 60px;
@@ -96,6 +103,19 @@
 		}
 	}
 
+
+	//This color will eventually be replaced by the new colors from the alert revamp PR.
+	&.icon-warning-light, .icon-warning-light {
+		color: #DF7200;
+	}
+	/*
+	*
+	*
+	* END: the above code has been deprecated as of version 16.0.0
+	*
+	*
+	*/
+
 	/* Dark theme
 	 */
 	&.dark-theme {
@@ -149,11 +169,6 @@
 		}
 	}
 
-	//This color will eventually be replaced by the new colors from the alert revamp PR.
-	&.icon-warning-light, .icon-warning-light {
-		color: #DF7200;
-	}
-
 	/* Theme/topic decorative image */
 	&.gc-topic-bg div {
 		background: no-repeat;
@@ -161,26 +176,5 @@
 		min-height: 200px;
 		overflow: hidden;
 		width: calc(50vw - 15px);
-	}
-
-	/* Contributors */
-	&.gc-contributors {
-		margin-top: 38px;
-
-		h2, ul {
-			display: inline;
-			font-size: $small-size;
-			margin-top: 0;
-		}
-
-		ul {
-			padding-inline-start: 0;
-
-			li {
-				display: inline-block;
-				font-weight: $bold-weight;
-				margin-right: .7em;
-			}
-		}
 	}
 }

@@ -1,7 +1,7 @@
 ---
 title: GCWeb, the WET-BOEW Canada.ca theme
 altLangPage: index-fr.html
-dateModified: 2023-12-12
+dateModified: 2024-12-09
 description: "Home page describing all the components of the Canada.ca theme, named GCWeb."
 layout: no-container
 language: en
@@ -20,7 +20,7 @@ css:
 			<p>The page templates and design patterns below comprise a reference implementation of the <a href="https://design.canada.ca">Canada.ca design system</a>, including the mandatory requirement of the Content and Information Architecture (C&amp;IA) Specification. Government of Canada departments and agencies can contribute additional patterns and templates via <a href="https://github.com/wet-boew/GCWeb">GCWeb github repository</a>.</p>
 		</div>
 		<div class="col-xs-12 col-md-auto pull-right">
-			<p><a href="https://github.com/wet-boew/GCWeb/archive/v14.2.0.zip" class="btn btn-primary">Download GCWeb theme <strong>v14.2.0</strong></a><br />
+			<p><a href="https://github.com/wet-boew/GCWeb/archive/v16.0.0.zip" class="btn btn-primary">Download GCWeb theme <strong>v16.0.0</strong></a><br />
 				<small>(<time>{{ page.dateModified | date: '%F' }}</time> - <a href="https://github.com/wet-boew/gcweb/releases/latest">Release notes</a>)</small></p>
 		</div>
 	</div>
@@ -34,7 +34,7 @@ css:
 					<li><a href="#components"><span aria-hidden="true" class="fas fa-cube mrgn-rght-md"></span>Components</a></li>
 					<li><a href="#templates"><span aria-hidden="true" class="fas fa-table mrgn-rght-md"></span>Templates</a></li>
 					<li><a href="#designPatterns"><span aria-hidden="true" class="fas fa-th-large mrgn-rght-md"></span>Design patterns</a></li>
-					<li><a href="#experiment"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-md"></span>Méli-mélo and thematics</a></li>
+					<li><a href="#experiment"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-md"></span>Experimentation and thematics</a></li>
 					<li><a href="#sitesglobal"><span aria-hidden="true" class="fas fa-globe mrgn-rght-md"></span>Sites and global functionality</a></li>
 					<li><a href="#wetboew"><span aria-hidden="true" class="fas fa-cube mrgn-rght-md"></span>Wet-boew</a></li>
 					<li><a href="#other"><span aria-hidden="true" class="fas fa-info-circle mrgn-rght-md"></span>Other documentation</a></li>
@@ -59,7 +59,7 @@ css:
 			<a href="#designPatterns" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-th-large mrgn-rght-sm"></span>Design patterns</a>
 		</li>
 		<li class="mrgn-lft-md">
-			<a href="#experiment" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-sm"></span>Méli-mélo and thematics</a>
+			<a href="#experiment" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-sm"></span>Experimentation and thematics</a>
 		</li>
 		<li class="mrgn-lft-md">
 			<a href="#sitesglobal" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-globe mrgn-rght-sm"></span>Sites and global</a>
@@ -288,17 +288,7 @@ css:
 		{% assign list-pages = designPattern.pages %}
 		<li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
 			<div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
-				<h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">{{ designPattern.title[ page.language ] }}
-				{% if designPattern.status == "stable" %}
-				<span class="label label-success mrgn-lft-sm"><span class="wb-inv">State: </span>{{ comp_status[ designPattern.status ] }}</span>
-				{% elsif designPattern.status == "provisional" %}
-				<span class="label label-warning mrgn-lft-sm"><span class="wb-inv">State: </span>{{ comp_status[ designPattern.status ] }}</span>
-				{% elsif designPattern.status == "deprecated" %}
-				<span class="label label-danger mrgn-lft-sm"><span class="wb-inv">State: </span>{{ comp_status[ designPattern.status ] }}</span>
-				{% else %}
-				<span class="label label-default mrgn-lft-sm"><span class="wb-inv">State: </span>Undefined</span>
-				{% endif %}
-				</h3>
+				<h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">{{ designPattern.title[ page.language ] }}</h3>
 				<div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
 					<p>{{ designPattern.description[ page.language ] | default: "[Short description of the design pattern]" }}</p>
 					<!--
@@ -378,9 +368,9 @@ css:
 				<h2 id="experiment" class="mrgn-tp-md mrgn-bttm-0">Special features</h2>
 					<div class="row">
 					    <div class="col-md-6">
-					    	<h3 id="méli-mélo">Méli-mélo</h3>
-						<p>The experimentation hub you have been waiting for! Méli-mélos allow you to bring in some awesome new code you would usually consider "custom" to the Canada.ca theme.</p>
-						<p class="mrgn-tp-lg"><a href="méli-mélo/méli-mélo-en.html" class="btn btn-default btn-lg">Learn more<span class="wb-inv"> about méli-mélo</span></a></p>
+					    	<h3 id="méli-mélo">Experimentation</h3>
+						<p>The experimentation hub you have been waiting for! The méli-mélo compilation which include experimental code allow you to bring in some awesome new code you would usually consider "custom" to the Canada.ca theme.</p>
+						<p class="mrgn-tp-lg"><a href="méli-mélo/méli-mélo-en.html" class="btn btn-default btn-lg">Learn more<span class="wb-inv"> about experimentation</span></a></p>
 					    </div>
 					    <div class="col-md-6">
 						<h3 id="thematics">Promotional thematics</h3><p>Do you have a set of pages that use an original look related to a specific promotion? Try this special hub for promotional thematics instead.</p>
@@ -630,7 +620,7 @@ css:
 					   {% endfor %}
 					{% endif %}
 					    <li><a href="https://github.com/wet-boew/GCWeb/tree/master/wet-boew/{{  wetboew.componentName }}" hreflang="en"><span class="fas fa-code small mrgn-rght-sm" aria-hidden="true"></span>Source code</a></li>
-					</ul> 
+					</ul>
 					<!--
 					> All examples and info
 					* Example

@@ -619,7 +619,7 @@ var componentName = "wb-fieldflow",
 			} else {
 
 				// We have a group of sub-items, the cur_itm are a group
-				selectOut += "<optgroup label='" + cur_itm.label + "'>";
+				selectOut += "<optgroup label='" + wb.escapeAttribute( stripHtml( cur_itm.label ) ) + "'>";
 				j_len = cur_itm.group.length;
 				for ( j = 0; j !== j_len; j += 1 ) {
 					selectOut += buildSelectOption( cur_itm.group[ j ] );
@@ -762,7 +762,7 @@ var componentName = "wb-fieldflow",
 		var arrItems = $items.get(),
 			i, i_len = arrItems.length, itmCached,
 			itmLabel, itmValue, grpItem,
-			j, j_len, childNodes, firstNode, childNode, $childNode, childNodeID,
+			j, j_len, childNodes, firstNode, firstElmNode, childNode, $childNode, childNodeID,
 			parsedItms = [],
 			actions;
 
@@ -774,6 +774,7 @@ var componentName = "wb-fieldflow",
 			itmLabel = "";
 
 			firstNode = itmCached.firstChild;
+			firstElmNode = itmCached.firstElementChild;
 			childNodes = itmCached.childNodes;
 			j_len = childNodes.length;
 
@@ -783,10 +784,10 @@ var componentName = "wb-fieldflow",
 
 			actions = [];
 
-			// Is firstNode an anchor?
-			if ( firstNode.nodeName === "A" ) {
-				itmValue = firstNode.getAttribute( "href" );
-				itmLabel = $( firstNode ).html();
+			// Is firstElmNode an anchor?
+			if ( firstElmNode && firstElmNode.nodeName === "A" ) {
+				itmValue = firstElmNode.getAttribute( "href" );
+				itmLabel = $( firstElmNode ).html().trim();
 				j_len = 1; // Force following elements to be ignored
 
 				actions.push( {
@@ -829,7 +830,12 @@ var componentName = "wb-fieldflow",
 			}
 
 			if ( !itmLabel ) {
-				itmLabel = firstNode.nodeValue;
+				const $itmCachedClean = $( itmCached ).clone();
+
+				// Remove nested structure in grouping (ul) and nesting (.wb-fieldflow-sub) scenarios
+				$itmCachedClean.children( "ul, .wb-fieldflow-sub" ).remove();
+
+				itmLabel = $itmCachedClean.html().trim();
 			}
 
 			// Set an id on the element
@@ -848,7 +854,7 @@ var componentName = "wb-fieldflow",
 		return parsedItms;
 	},
 	buildSelectOption = function( data ) {
-		var label = data.label,
+		var label = stripHtml( data.label ),
 			out = "<option value='" + wb.escapeAttribute( label ) + "'";
 
 		out += buildDataAttribute( data );
@@ -876,7 +882,7 @@ var componentName = "wb-fieldflow",
 		var fieldID = wb.getId(),
 			labelTxt = data.label,
 			label = "<label for='" + fieldID + "'>",
-			input = "<input id='" + fieldID + "' type='" + inputType + "' name='" + fieldName + "' value='" + wb.escapeAttribute( labelTxt ) + "'" + buildDataAttribute( data ),
+			input = "<input id='" + fieldID + "' type='" + inputType + "' name='" + fieldName + "' value='" + wb.escapeAttribute( stripHtml( labelTxt ) ) + "'" + buildDataAttribute( data ),
 			tag = !isInline && isGcChckbxrdio ? "li" : "div",
 			out = "<" + tag + " class='" + inputType;
 
@@ -900,6 +906,12 @@ var componentName = "wb-fieldflow",
 		out += "</label>" + "</" + tag + ">";
 
 		return out;
+	},
+
+	// Strip HTML markup from strings
+	// Created by Chris Coyier via CSS-Tricks (https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/)
+	stripHtml = function( str ) {
+		return str.replace( /(<([^>]+)>)/gi, "" );
 	};
 
 $document.on( resetActionEvent, selector + ", ." + subComponentName, function( event ) {
@@ -1100,7 +1112,7 @@ $document.on( "submit", selectorForm + " form", function( event ) {
 		$elm = $( elm ),
 		wbFieldFlowRegistered = $elm.data( registerJQData ),
 		wbRegisteredHidden = $elm.data( registerHdnFld ) || [],
-		$hdnField,
+		hdnField,
 		i, i_len = wbFieldFlowRegistered ? wbFieldFlowRegistered.length : 0,
 		$wbFieldFlow, fieldOrigin,
 		lstFieldFlowPostEvent = [],
@@ -1195,9 +1207,14 @@ $document.on( "submit", selectorForm + " form", function( event ) {
 						cacheName = items[ 0 ];
 						cacheParam = items[ 1 ];
 					}
-					$hdnField = $( "<input type='hidden' name='" + cacheName + "' value='" + wb.escapeAttribute( cacheParam ) + "' />" );
-					$elm.append( $hdnField );
-					wbRegisteredHidden.push( $hdnField.get( 0 ) );
+
+					hdnField = document.createElement( "input" );
+					hdnField.type = "hidden";
+					hdnField.name = cacheName;
+					hdnField.value = wb.escapeAttribute( cacheParam );
+
+					$elm.append( hdnField );
+					wbRegisteredHidden.push( hdnField );
 				}
 				$elm.data( registerHdnFld, wbRegisteredHidden );
 			}
@@ -1253,115 +1270,115 @@ $document.on( fieldflowActionsEvents, selector, function( event, data ) {
 	var eventType = event.type;
 
 	switch ( event.namespace ) {
-	case drawEvent:
-		switch ( eventType ) {
-		case componentName:
-			drwFieldflow( event, data );
+		case drawEvent:
+			switch ( eventType ) {
+				case componentName:
+					drwFieldflow( event, data );
+					break;
+				case "tblfilter":
+					drwTblFilter( event, data );
+					break;
+			}
 			break;
-		case "tblfilter":
-			drwTblFilter( event, data );
-			break;
-		}
-		break;
 
-	case createCtrlEvent:
-		switch ( eventType ) {
-		case "select":
-			ctrlSelect( event, data );
+		case createCtrlEvent:
+			switch ( eventType ) {
+				case "select":
+					ctrlSelect( event, data );
+					break;
+				case "checkbox":
+					data.typeRadCheck = "checkbox";
+					ctrlChkbxRad( event, data );
+					break;
+				case "radio":
+					data.typeRadCheck = "radio";
+					ctrlChkbxRad( event, data );
+					break;
+			}
 			break;
-		case "checkbox":
-			data.typeRadCheck = "checkbox";
-			ctrlChkbxRad( event, data );
-			break;
-		case "radio":
-			data.typeRadCheck = "radio";
-			ctrlChkbxRad( event, data );
-			break;
-		}
-		break;
 
-	case actionEvent:
-		switch ( eventType ) {
-		case "append":
-			actAppend( event, data );
-			break;
-		case "redir":
-			pushData( $( data.provEvt ), submitJQData, data, true );
-			break;
-		case "ajax":
-			actAjax( event, data );
-			break;
-		case "tblfilter":
-			actTblFilter( event, data );
-			break;
-		case "toggle":
-			if ( data.live ) {
-				subToggle( event, data );
-			} else {
-				data.preventSubmit = true;
-				pushData( $( data.provEvt ), submitJQData, data );
+		case actionEvent:
+			switch ( eventType ) {
+				case "append":
+					actAppend( event, data );
+					break;
+				case "redir":
+					pushData( $( data.provEvt ), submitJQData, data, true );
+					break;
+				case "ajax":
+					actAjax( event, data );
+					break;
+				case "tblfilter":
+					actTblFilter( event, data );
+					break;
+				case "toggle":
+					if ( data.live ) {
+						subToggle( event, data );
+					} else {
+						data.preventSubmit = true;
+						pushData( $( data.provEvt ), submitJQData, data );
+					}
+					break;
+				case "addClass":
+					if ( !data.source || !data.class ) {
+						return;
+					}
+					if ( data.live ) {
+						$( data.source ).addClass( data.class );
+					} else {
+						data.preventSubmit = true;
+						pushData( $( data.provEvt ), submitJQData, data );
+					}
+					break;
+				case "removeClass":
+					if ( !data.source || !data.class ) {
+						return;
+					}
+					if ( data.live ) {
+						$( data.source ).removeClass( data.class );
+					} else {
+						data.preventSubmit = true;
+						pushData( $( data.provEvt ), submitJQData, data );
+					}
+					break;
+				case "query":
+					actQuery( event, data );
+					break;
 			}
 			break;
-		case "addClass":
-			if ( !data.source || !data.class ) {
-				return;
-			}
-			if ( data.live ) {
-				$( data.source ).addClass( data.class );
-			} else {
-				data.preventSubmit = true;
-				pushData( $( data.provEvt ), submitJQData, data );
-			}
-			break;
-		case "removeClass":
-			if ( !data.source || !data.class ) {
-				return;
-			}
-			if ( data.live ) {
-				$( data.source ).removeClass( data.class );
-			} else {
-				data.preventSubmit = true;
-				pushData( $( data.provEvt ), submitJQData, data );
-			}
-			break;
-		case "query":
-			actQuery( event, data );
-			break;
-		}
-		break;
 
-	case submitEvent:
-		switch ( eventType ) {
-		case "redir":
-			subRedir( event, data );
+		case submitEvent:
+			switch ( eventType ) {
+				case "redir":
+					subRedir( event, data );
+					break;
+				case "ajax":
+					subAjax( event, data );
+					break;
+				case "toggle":
+					subToggle( event, data );
+					break;
+				case "addClass":
+					$( data.source ).addClass( data.class );
+					break;
+				case "removeClass":
+					$( data.source ).removeClass( data.class );
+					break;
+				case "query":
+					actQuery( event, data );
+					break;
+			}
 			break;
-		case "ajax":
-			subAjax( event, data );
-			break;
-		case "toggle":
-			subToggle( event, data );
-			break;
-		case "addClass":
-			$( data.source ).addClass( data.class );
-			break;
-		case "removeClass":
-			$( data.source ).removeClass( data.class );
-			break;
-		case "query":
-			actQuery( event, data );
-			break;
-		}
-		break;
 	}
 } );
 
 // Bind the init event of the plugin
 $document.on( "timerpoke.wb " + initEvent, selector, function( event ) {
 	switch ( event.type ) {
-	case "timerpoke":
-	case "wb-init":
-		init( event );
-		break;
+		case "timerpoke":
+		case "wb-init":
+			init( event );
+			break;
 	}
 
 	/*

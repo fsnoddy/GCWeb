@@ -53,6 +53,17 @@ module.exports = (grunt) ->
 	)
 
 	@registerTask(
+		"build"
+		"Build a local working copy without dependencies check"
+		[
+			"jekyll-theme"
+			"jekyll-theme-runLocal"
+			"core-dist-DEBUG"
+			"site-contents"
+		]
+	)
+
+	@registerTask(
 		"demo"
 		"Build a demo ready version of the site"
 		[
@@ -488,8 +499,7 @@ module.exports = (grunt) ->
 		"check-wet-version"
 		"Ensure WET-BOEW's version is the same in package as in node_modules",
 		(src) ->
-			installedFull = this.data[0]
-			installed = installedFull.substring(installedFull.indexOf("#") + 2)
+			installed = this.data[0]
 			expectedFull = this.data[1]
 			expected = expectedFull.substring(expectedFull.indexOf("#") + 2)
 
@@ -527,7 +537,7 @@ module.exports = (grunt) ->
 					checkGitUrls: true
 
 		"check-wet-version":
-			src: ["<%= pkgWET._from %>", "<%= pkg.dependencies['wet-boew'] %>"]
+			src: ["<%= pkgWET.version %>", "<%= pkg.dependencies['wet-boew'] %>"]
 
 		"a11y-report":
 			all:

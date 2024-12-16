@@ -7,6 +7,179 @@
 		"modified": "dct:modified"
 	},
 	"title": {
+		"en": "Bold content",
+		"fr": "Contenu en gras"
+	},
+	"description": {
+		"en": "This component applies font weight bold to every text element inside it and generates normal font weight when the element <code>&lt;strong&gt;</code> is applied.",
+		"fr": "Ce composant applique une épaisseur de police en gras à chaque élément de texte qu'il contient et génère une épaisseur de police normale lorsque l'élément <code>&lt;strong&gt;</code> est appliqué."
+	},
+	"modified": "2024-02-05",
+	"componentName": "bold-content",
+	"status": "stable",
+	"version": "1.1",
+	"pages": {
+		"examples": [
+			{
+				"title": "Bold content - working example",
+				"language": "en",
+				"path": "bold-content-en.html"
+			},
+			{
+				"title": "Contenu en gras - example pratique",
+				"language": "fr",
+				"path": "bold-content-fr.html"
+			}
+		],
+		"docs": [
+			{
+				"title": "Bold content",
+				"language": "en",
+				"path": "bold-content-doc-en.html"
+			},
+			{
+				"title": "Contenu en gras",
+				"language": "fr",
+				"path": "bold-content-doc-fr.html"
+			}
+		]
+	},
+	"a11yGuidance": "no accessibility guidance",
+	"variations": [
+		{
+			"name": {
+				"en": "Bold content - default",
+				"fr": "Contenu en gras - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "This component applies font weight bold to every text element inside it and generates normal font weight when the element <code>strong</code> is applied.",
+				"fr": "Cette composante applique un poid de police de caractère gras à chaque élément de texte à l'intérieur et génère un poid de police de caractère normal lorsque l'élément <code>strong</code> est appliqué."
+			},
+			"iteration": "_:iteration_bold_1",
+			"example": [
+				{
+					"en": { "href": "bold-content-en.html", "text": "Bold content" },
+					"fr": { "href": "bold-content-fr.html", "text": "Contenu en gras" }
+				}
+			],
+			"implementation": [
+				"_:implement_bold"
+			],
+			"history": [
+				{
+					"en": "February 2024 - Added support for the \".bold-content\" class to eventually deprecate the use of \".well-bold\".",
+					"fr": "Février 2024 - Ajout du support de la classe \".bold-content\" pour éventuellement déprécier l'usage de \".well-bold\"."
+				},
+				{
+					"en": "June 2021 - Initial implementation of the component.",
+					"fr": "Juin 2021 - Implémentation initiale de la composante."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_bold",
+			"iteration": "_:iteration_bold_1",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Add the CSS class <code>bold-content</code> to the element wrapping the content you want to have bolded."
+				],
+				"fr": [
+					"Ajoutez la classe CSS <code>bold-content</code> à l'élément enveloppant le contenu que vous souhaitez mettre en gras."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample:",
+						"code": "<div class=\"bold-content\">\n\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quaerat aliquid, nobis consectetur amet et!</p>\n\t<p>Cum placeat soluta quibusdam id. Temporibus, delectus eos optio distinctio itaque architecto aperiam deserunt repudiandae!</p>\n\t<p>Facilis obcaecati quae reprehenderit harum. Quaerat id optio, qui tempora aliquid numquam deserunt consequuntur enim!</p>\n\t<p>Facere ad, dicta nobis exercitationem incidunt animi quam porro laborum possimus aperiam beatae nemo! Officiis?</p>\n\t<p>Magnam, deserunt inventore aliquid illum nihil dolore praesentium, ab mollitia, doloribus odit vitae recusandae tempore!</p>\n</div>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code&nbsp;:",
+						"code": "<div class=\"bold-content\">\n\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quaerat aliquid, nobis consectetur amet et!</p>\n\t<p>Cum placeat soluta quibusdam id. Temporibus, delectus eos optio distinctio itaque architecto aperiam deserunt repudiandae!</p>\n\t<p>Facilis obcaecati quae reprehenderit harum. Quaerat id optio, qui tempora aliquid numquam deserunt consequuntur enim!</p>\n\t<p>Facere ad, dicta nobis exercitationem incidunt animi quam porro laborum possimus aperiam beatae nemo! Officiis?</p>\n\t<p>Magnam, deserunt inventore aliquid illum nihil dolore praesentium, ab mollitia, doloribus odit vitae recusandae tempore!</p>\n</div>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_bold_2",
+			"name": "Bold content - Iteration 2",
+			"date": "2024-02",
+			"detectableBy": ".bold-content",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<div class=\"bold-content\">\n\t<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quaerat aliquid, nobis consectetur amet et!</p>\n\t<p>Cum placeat soluta quibusdam id. Temporibus, delectus eos optio distinctio itaque architecto aperiam deserunt repudiandae!</p>\n\t<p>Facilis obcaecati quae reprehenderit harum. Quaerat id optio, qui tempora aliquid numquam deserunt consequuntur enim!</p>\n\t<p>Facere ad, dicta nobis exercitationem incidunt animi quam porro laborum possimus aperiam beatae nemo! Officiis?</p>\n\t<p>Magnam, deserunt inventore aliquid illum nihil dolore praesentium, ab mollitia, doloribus odit vitae recusandae tempore!</p>\n</div>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_bold_1",
+			"name": "Well bold - Iteration 1",
+			"date": "2021-06",
+			"detectableBy": ".well.well-bold",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<div class=\"well well-bold\">\n\t<ul>\n\t\t<li>Finibus Bonorum</li>\n\t\t<li>Vestibulum tincidunt</li>\n\t\t<li>Tempor viverra metus</li>\n\t\t<li>Sed non faucibus nisl</li>\n\t\t<li>Suspendisse</li>\n\t\t<li><strong>Sed ut</strong>: perspiciatis</li>\n\t</ul>\n</div>"
+				}
+			]
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_bold_2",
+			"name": "Bold content",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_bold_2",
+			"detectableBy": ".bold-content",
+			"layout": "Not applicable",
+			"style": "Content is bolded inside the element when adding the CSS class \".bold-content\"",
+			"semantic": "Not applicable"
+		},
+		{
+			"@id": "_:cs_bold_1",
+			"name": "Well bold",
+			"status": "deprecated",
+			"deprecatedOn": "2024-02-05",
+			"baseOnIteration": "_:iteration_bold_1",
+			"detectableBy": ".well.well-bold",
+			"layout": "Not applicable",
+			"style": "Content is bolded inside a \".well\" when adding the CSS class \".well-bold\"",
+			"semantic": "Not applicable",
+			"notes": "The style .well.well-bold was moved to the deprecated méli-mélo."
+		}
+	]
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
 		"en": "Checkboxes and radio buttons",
 		"fr": "Cases à cocher et boutons radio"
 	},
@@ -65,6 +238,180 @@
 		"modified": "dct:modified"
 	},
 	"title": {
+		"en": "Contributors",
+		"fr": "Collaborateurs"
+	},
+	"description": {
+		"en": "Links to institutions or organizations that support the content on the page.",
+		"fr": "Liens menant aux institutions ou aux organisations qui soutiennent le contenu sur la page."
+	},
+	"modified": "2024-05-28",
+	"componentName": "gc-contributors",
+	"status": "stable",
+	"version": "1.0.0",
+	"pages": {
+		"docs": [
+			{
+				"title": "Contributors",
+				"language": "en",
+				"path": "gc-contributors-doc-en.html"
+			},
+			{
+				"title": "Collaborateurs",
+				"language": "fr",
+				"path": "gc-contributors-doc-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Contributors",
+				"language": "en",
+				"path": "gc-contributors-en.html"
+			},
+			{
+				"title": "Collaborateurs",
+				"language": "fr",
+				"path": "gc-contributors-fr.html"
+			}
+		]
+	},
+	"a11yGuidance": "No accessibility guidance.",
+	"variations": [
+		{
+			"name": {
+				"en": "Contributors - default",
+				"fr": "Collaborateurs - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "Links to institutions or organizations that support the content on the page.",
+				"fr": "Liens menant aux institutions ou aux organisations qui soutiennent le contenu sur la page."
+			},
+			"iteration": "_:iteration_contributors_2",
+			"example": [
+				{
+					"en": { "href": "gc-contributors-en.html", "text": "Contributors" },
+					"fr": { "href": "gc-contributors-fr.html", "text": "Collaborateurs" }
+				}
+			],
+			"implementation": [
+				"_:implement_contributors"
+			],
+			"history": [
+				{
+					"en": "May 2024 - Stabilizing component.",
+					"fr": "Mai 2024 - Stabilisation du composant."
+				},
+				{
+					"en": "January 2021 - Initial provisional implementation to gather user experience data.",
+					"fr": "Janvier 2021 - Implémentation provisoire initiale pour recueillir des données sur l'expérience utilisateur."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_contributors",
+			"iteration": "_:iteration_contributors_2",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Refer to the following code sample."
+				],
+				"fr": [
+					"Référez-vous au code qui suit."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample:",
+						"code": "<section class=\"gc-contributors\">\n\t<h2>From:</h2>\n\t<ul>\n\t\t<li><a href=\"#\">[Department or agency 1]</a></li>\n\t\t<li><a href=\"#\">[Department or agency 2]</a></li>\n\t</ul>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code :",
+						"code": "<section class=\"gc-contributors\">\n\t<h2>De&nbsp;:</h2>\n\t<ul>\n\t\t<li><a href=\"#\">[Ministère ou agence 1]</a></li>\n\t\t<li><a href=\"#\">[Ministère ou agence 2]</a></li>\n\t</ul>\n</section>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_contributors_2",
+			"name": "Contributors - Iteration 2",
+			"date": "2024-05",
+			"detectableBy": ".gc-contributors:not(.provisional)",
+			"additions": [
+				"Stabilized component"
+			],
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"gc-contributors\">\n\t<h2>From:</h2>\n\t<ul>\n\t\t<li><a href=\"#\">[Department or agency 1]</a></li>\n\t\t<li><a href=\"#\">[Department or agency 2]</a></li>\n\t</ul>\n</section>"
+				}
+			],
+			"predecessor": "_:iteration_contributors_1"
+		},
+		{
+			"@id": "_:iteration_contributors_1",
+			"name": "Contributors - Iteration 1",
+			"date": "2021-01",
+			"detectableBy": ".provisional.gc-contributors",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"provisional gc-contributors\">\n\t<h2>From:</h2>\n\t<ul>\n\t\t<li><a href=\"#\">[Department or agency 1]</a></li>\n\t\t<li><a href=\"#\">[Department or agency 2]</a></li>\n\t</ul>\n</section>"
+				}
+			],
+			"successor": "_:iteration_contributors_2"
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_contributors",
+			"name": "Contributors",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_contributors_2",
+			"detectableBy": ".gc-contributors",
+			"layout": "Title and list are displayed inline on medium screens and up. They are displayed vertically on smaller screens.",
+			"semantic": "section>h2+ul>li*n>a",
+			"style": "The <h2> font size is smaller. The links are bolded.",
+			"static": [
+				"From:",
+				"De :"
+			],
+			"schema": [
+				"Array of contributors objects",
+				"contributors object: contributor name, contributor link"
+			]
+		}
+	]
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
 		"en": "Download link",
 		"fr": "Lien de téléchargement"
 	},
@@ -99,30 +446,292 @@
 		"modified": "dct:modified"
 	},
 	"title": {
-		"en": "Featured link - Documentation and working example",
-		"fr": "Lien en vedette - Documentation et example pratique"
+		"en": "Featured link",
+		"fr": "Lien en vedette"
 	},
 	"description": {
 		"en": "This adds a featured link to a page that your institution needs to feature prominently.",
 		"fr": "Ceci ajoute un lien en vedette court et descriptif vers une page que votre institution doit mettre en évidence."
 	},
-	"modified": "2021-05-20",
+	"modified": "2024-02-21",
 	"componentName": "gc-featured-link",
-	"status": "provisional",
+	"status": "stable",
+	"version": "1.0.0",
 	"pages": {
+		"docs": [
+			{
+				"title": "Featured link",
+				"language": "en",
+				"path": "gc-featured-link-doc-en.html"
+			},
+			{
+				"title": "Lien en vedette",
+				"language": "fr",
+				"path": "gc-featured-link-doc-fr.html"
+			}
+		],
 		"examples": [
 			{
-				"title": "Featured link - Documentation and working example",
+				"title": "Featured link",
 				"language": "en",
 				"path": "gc-featured-link-en.html"
 			},
-		{
-				"title": "Lien en vedette - Documentation et example pratique",
+			{
+				"title": "Lien en vedette",
 				"language": "fr",
 				"path": "gc-featured-link-fr.html"
 			}
+		],
+		"reports": [
+			{
+				"title": "Accessibility pre-assessment #1",
+				"language": "en",
+				"path": "reports/a11y-1-en.html"
+			},
+			{
+				"title": "Pré-évaluation de l'accessibilité #1",
+				"language": "fr",
+				"path": "reports/a11y-1-fr.html"
+			},
+			{
+				"title": "Accessibility assessment #1",
+				"language": "en",
+				"path": "reports/a11y-2-en.html"
+			},
+			{
+				"title": "Évaluation de l'accessibilité #1",
+				"language": "fr",
+				"path": "reports/a11y-2-fr.html"
+			}
 		]
-	}
+	},
+	"a11yGuidance": "No accessibility guidance.",
+	"variations": [
+		{
+			"name": {
+				"en": "Featured link - default",
+				"fr": "Lien en vedette - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "This adds a featured link to a page that your institution needs to feature prominently.",
+				"fr": "Ceci ajoute un lien en vedette court et descriptif vers une page que votre institution doit mettre en évidence."
+			},
+			"iteration": "_:iteration_featuredLink_3",
+			"example": [
+				{
+					"en": { "href": "gc-featured-link-en.html", "text": "Featured link" },
+					"fr": { "href": "gc-featured-link-fr.html", "text": "Lien en vedette" }
+				}
+			],
+			"implementation": [
+				"_:implement_featuredLink",
+				"_:implement_migrationProvisional"
+			],
+			"history": [
+				{
+					"en": "March 2024 - Stabilizing component.",
+					"fr": "Mars 2024 - Stabilisation de la composante."
+				},
+				{
+					"en": "August 2023 - Adding possibility to customize the background color.",
+					"fr": "Août 2023 - Ajout de la possibilité de personnaliser la couleur de fond."
+				},
+				{
+					"en": "June 2021 - Initial provisional implementation to gather user experience data.",
+					"fr": "Juin 2021 - Implémentation provisoire initiale pour recueillir des données sur l'expérience utilisateur."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_featuredLink",
+			"iteration": "_:iteration_featuredLink_3",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Refer to the following code sample.",
+					"You can optionally add a description under the featured link.",
+					"To customize the background color, add the attribute <code>data-bg-color</code> to the <code>&lt;section></code> element. The value should be the hexadecimal code of the desired color, for example: <code>#005B61</code>."
+				],
+				"fr": [
+					"Référez-vous au code qui suit.",
+					"Vous pouvez facultativement ajouter une description sous le lien en vedette.",
+					"Pour personnaliser la couleur d'arrière-plan, ajoutez l'attribut <code>data-bg-color</code> à l'élément <code>&lt;section></code>. La valeur doit être le code hexadécimal de la couleur souhaitée, par exemple&nbsp;: <code>#005B61</code>."
+				]
+			},
+			"notes": {
+				"en": [
+					"When customizing the background color, the component will automatically apply the correct color to the text: <code>#FFFFFF</code> for dark colors, <code>#333333</code> for light colors, <code>#000000</code> for colors in-between."
+				],
+				"fr": [
+					"Lorsque la couleur de fond est personnalisée, la composante appliquera automatiquement la bonne couleur au texte : <code>#FFFFFF</code> pour les couleurs sombres, <code>#333333</code> pour les couleurs claires, <code>#000000</code> pour les couleurs intermédiaires."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample:",
+						"code": "<section class=\"gc-featured-link\" data-bg-color\"#005B61\">\n\t<div class=\"container\">\n\t\t<h2 class=\"wb-inv\">Spotlight on</h2>\n\t\t<p><a class=\"stretched-link\" href=\"#\">[Promotion title]</a></p>\n\t</div>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code :",
+						"code": "<section class=\"gc-featured-link\" data-bg-color\"#005B61\">\n\t<div class=\"container\">\n\t\t<h2 class=\"wb-inv\">Pleins feux sur</h2>\n\t\t<p><a class=\"stretched-link\" href=\"#\">[Titre de la promotion]</a></p>\n\t</div>\n</section>"
+					}
+				]
+			}
+		},
+		{
+			"@id": "_:implement_migrationProvisional",
+			"iteration": "_:iteration_featuredLink_3",
+			"name": {
+				"en": "Migration from provisional to stable v1.0.0",
+				"fr": "Migration de provisoire à stable v1.0.0"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers attempting to update the component from its provisional state to its stable state version 1.0.0.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs tentant de mettre à jour la composante à partir de l'état provoire vers l'état stable version 1.0.0."
+			},
+			"instructions": {
+				"en": [
+					"Remove the CSS class \"provisional\".",
+					"Remove the starting and end tags for both <code>&lt;div class=\"row\">&lt;/div></code> and <code>&lt;div class=\"col-xs-12\">&lt;/div></code>.",
+					"Update the <code>&lt;h2 class=\"wb-inv\"></code> title to \"Spotlight on\"."
+				],
+				"fr": [
+					"Supprimer la classe CSS \"provisoire\".",
+					"Supprimez les balises de début et de fin pour <code>&lt;div class=\"row\">&lt;/div></code> et <code>&lt;div class=\"col-xs-12\" >&lt;/div></code>.",
+					"Mettez à jour le titre <code>&lt;h2 class=\"wb-inv\"></code> à \"Pleins feux sur\"."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code before:",
+						"code": "<section class=\"provisional gc-featured-link\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12\">\n\t\t\t\t<h2 class=\"wb-inv\">Featured</h2>\n\t\t\t\t<p><a class=\"stretched-link\" href=\"#\">[Promotion title]</a></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+					},
+					{
+						"@type": "source-code",
+						"description": "Code after:",
+						"code": "<section class=\"gc-featured-link\">\n\t<div class=\"container\">\n\t\t<h2 class=\"wb-inv\">Spotlight on</h2>\n\t\t<p><a class=\"stretched-link\" href=\"#\">[Promotion title]</a></p>\n\t</div>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Code avant :",
+						"code": "<section class=\"provisional gc-featured-link\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12\">\n\t\t\t\t<h2 class=\"wb-inv\">En vedette</h2>\n\t\t\t\t<p><a class=\"stretched-link\" href=\"#\">[Titre de la promotion]</a></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+					},
+					{
+						"@type": "source-code",
+						"description": "Code après :",
+						"code": "<section class=\"gc-featured-link\">\n\t<div class=\"container\">\n\t\t<h2 class=\"wb-inv\">Pleins feux sur</h2>\n\t\t<p><a class=\"stretched-link\" href=\"#\">[Titre de la promotion]</a></p>\n\t</div>\n</section>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_featuredLink_3",
+			"name": "Featured link - Iteration 3",
+			"date": "2024-03",
+			"detectableBy": ".gc-featured-link:not(.provisional)",
+			"breaking": [
+				"Removed unnecessary grid",
+				"Changed hidden heading"
+			],
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"gc-featured-link\">\n\t<div class=\"container\">\n\t\t<h2 class=\"wb-inv\">Spotlight on</h2>\n\t\t<p><a class=\"stretched-link\" href=\"#\">[Promotion title]</a></p>\n\t</div>\n</section>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_featuredLink_2",
+			"name": "Featured link - Iteration 2",
+			"date": "2023-08",
+			"detectableBy": ".provisional.gc-featured-link[data-bg-color]",
+			"additions": [
+				"Adding possibility to customize the background color."
+			],
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"provisional gc-featured-link\" data-bg-color\"#005B61\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12\">\n\t\t\t\t<h2 class=\"wb-inv\">Featured</h2>\n\t\t\t\t<p><a class=\"stretched-link\" href=\"#\">[Promotion title]</a></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_featuredLink_1",
+			"name": "Featured link - Iteration 1",
+			"date": "2021-06",
+			"detectableBy": ".provisional.gc-featured-link",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"provisional gc-featured-link\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12\">\n\t\t\t\t<h2 class=\"wb-inv\">Featured</h2>\n\t\t\t\t<p><a class=\"stretched-link\" href=\"#\">[Promotion title]</a></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_featuredLinkHelpers_1",
+			"name": "Featured link with helpers - Iteration 1",
+			"date": "unknown",
+			"detectableBy": ".bg-gctheme.opct-90 a.stretched-link",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<div class=\"bg-gctheme opct-90\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"mrgn-tp-md mrgn-bttm-md col-xs-12\">\n\t\t\t\t<p class=\"pull-left text-white mrgn-bttm-0\">Featured: </p>\n\t\t\t\t<p class=\"pull-left mrgn-bttm-0\"><a class=\"stretched-link text-white\" href=\"#\">[Promotion title]</a></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+				}
+			]
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_featuredLink",
+			"name": "Featured link",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_featuredLink_1",
+			"detectableBy": ".gc-featured-link",
+			"layout": "Component spans across viewport width, link spans across container width.",
+			"semantic": "section>h2+a",
+			"style": "By default, the background color of the component is blue with white text.",
+			"static": [
+				"Featured",
+				"En vedette"
+			],
+			"schema": [
+				"Link title (type: STRING)",
+				"Link URL (type: STRING)",
+				"Link description (type: STRING)",
+				"Background color (type: STRING) - optional"
+			],
+			"configuration": "data-bg-color: customize the background color"
+		}
+	]
 }
 ,{
 	"@context": {
@@ -191,30 +800,361 @@
 		"modified": "dct:modified"
 	},
 	"title": {
-		"en": "Feeds plugin GC override",
-		"fr": "Application de styles GC au plugiciel de fils de syndication"
+		"en": "Social media channels",
+		"fr": "Bloc des réseaux de médias sociaux"
 	},
 	"description": {
-		"en": "Overrides the WET ATOM feeds to apply GC design pattern.",
-		"fr": "Remplace les Fils de syndication pour appliquer le modèle de conception GC."
+		"en": "The social media channels pattern provides links to official Government of Canada (GC) social media accounts.",
+		"fr": "La configuration de conception des chaînes de médias sociaux fournit des liens vers les comptes de médias sociaux officiels du gouvernement du Canada (GC)."
 	},
-	"modified": "2021-06-02",
-	"componentName": "gc-feeds",
-	"status": "provisional",
+	"modified": "2024-02-05",
+	"componentName": "gc-follow-us",
+	"status": "stable",
+	"version": "2.1",
 	"pages": {
 		"docs": [
 			{
-				"title": "Feeds GC overrides - Documentation and working example.",
+				"title": "Social media channels - Documentation",
 				"language": "en",
-				"path": "gc-feeds-en.html"
+				"path": "gc-follow-us-doc-en.html"
 			},
 			{
-				"title": "Fils de syndication remplacement GC - Documentation et exemple pratique",
+				"title": "Bloc des réseaux de médias sociaux - Documentation",
 				"language": "fr",
-				"path": "gc-feeds-fr.html"
+				"path": "gc-follow-us-doc-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Social media channels",
+				"language": "en",
+				"path": "gc-follow-us-en.html"
+			},
+			{
+				"title": "Bloc des réseaux de médias sociaux",
+				"language": "fr",
+				"path": "gc-follow-us-fr.html"
 			}
 		]
-	}
+	},
+	"a11yGuidance": "no accessibility guidance",
+	"variations": [
+		{
+			"name": {
+				"en": "GC Follow us - default",
+				"fr": "GC Suivez-nous - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "The social media channels pattern provides links to official Government of Canada (GC) social media accounts.",
+				"fr": "La configuration de conception des chaînes de médias sociaux fournit des liens vers les comptes de médias sociaux officiels du gouvernement du Canada (GC)."
+			},
+			"guidance": {
+				"en": "https://design.canada.ca/common-design-patterns/social-media-channels.html",
+				"fr": "https://conception.canada.ca/configurations-conception-communes/bloc-medias-sociaux.html"
+			},
+			"iteration": "_:iteration_gc_follow_1",
+			"example": [
+				{
+					"en": { "href": "gc-follow-us-en.html", "text": "GC Follow us" },
+					"fr": { "href": "gc-follow-us-fr.html", "text": "GC Suivez-nous" }
+				}
+			],
+			"implementation": [
+				"_:implement_gc_follow"
+			],
+			"history": [
+				{
+					"en": "July 2024 - Adding 'More ways to connect' optional link.",
+					"fr": "Juillet 2024 - Ajout du lien optionnel « D'autres moyens de rester en contact »."
+				},
+				{
+					"en": "February 2024 - Initial implementation of the variation.",
+					"fr": "Février 2024 - Implémentation initiale de la variante."
+				}
+			]
+		},
+		{
+			"name": {
+				"en": "Follow us",
+				"fr": "Suivez-nous"
+			},
+			"status": "deprecated",
+			"description": {
+				"en": "The social media channels pattern provides links to official Government of Canada (GC) social media accounts.",
+				"fr": "La configuration de conception des chaînes de médias sociaux fournit des liens vers les comptes de médias sociaux officiels du gouvernement du Canada (GC)."
+			},
+			"guidance": {
+				"en": "https://design.canada.ca/common-design-patterns/social-media-channels.html",
+				"fr": "https://conception.canada.ca/configurations-conception-communes/bloc-medias-sociaux.html"
+			},
+			"iteration": "_:iteration_follow_1",
+			"example": [
+				{
+					"en": { "href": "deprecated/follow-us-en.html", "text": "Follow us" },
+					"fr": { "href": "deprecated/follow-us-fr.html", "text": "Suivez-nous" }
+				}
+			],
+			"implementation": [
+				"_:implement_follow"
+			],
+			"history": [
+				{
+					"en": "September 2024 - This variant is now officially deprecated.",
+					"fr": "Septembre 2024 - Cette variante est maintenant officiellement obsolète."
+				},
+				{
+					"en": "April 2017 - Initial implementation of the variation.",
+					"fr": "Avril 2017 - Implémentation initiale de la variante."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_gc_follow",
+			"iteration": "_:iteration_gc_follow_2",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Refer to the below code sample.",
+					"To display the icons horizontally, add the CSS class \"<code>list-inline</code>\" to the <code>&lt;ul></code>.",
+					"If there is more than one account from a single platform, make them available via an <a href=\"https://wet-boew.github.io/wet-boew/demos/overlay/overlay-en.html\">overlay (popup)</a>.",
+					"Information on how to display the 'More ways to connect' link will be available soon."
+				],
+				"fr": [
+					"Référez-vous à l'exemple de code ci-dessous.",
+					"Pour afficher les icônes horizontalement, ajoutez la classe CSS \"<code>list-inline</code>\" au <code>&lt;ul></code>.",
+					"S’il y a plus d’un compte pour une même plateforme, énumérez-les dans un <a href=\"https://wet-boew.github.io/wet-boew/demos/overlay/overlay-fr.html\">contenu superposé (popup)</a>.",
+					"Des informations sur la façon d'afficher le lien « D'autres moyens de rester en contact » seront disponibles bientôt."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Default layout code sample:",
+						"code": "<section class=\"gc-followus\">\n\t<h2>On social media</h2>\n\t<ul>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"facebook\"><span class=\"wb-inv\">Facebook: </span>FacebookPageName</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"twitter\"><span class=\"wb-inv\">Twitter: </span>@TwitterAccount</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"youtube\"><span class=\"wb-inv\">Youtube: </span>YouTubeName</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"instagram\"><span class=\"wb-inv\">Instagram: </span>InstagramName</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"linkedin\"><span class=\"wb-inv\">LinkedIn: </span>LinkedInName</a></li>\n\t</ul>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code pour disposition par défaut :",
+						"code": "<section class=\"gc-followus\">\n\t<h2>Dans les médias sociaux</h2>\n\t<ul>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"facebook\"><span class=\"wb-inv\">Facebook: </span>NomPageFacebook</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"twitter\"><span class=\"wb-inv\">Twitter: </span>@CompteTwitter</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"youtube\"><span class=\"wb-inv\">Youtube: </span>NomYouTube</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"instagram\"><span class=\"wb-inv\">Instagram: </span>NomInstagram</a></li>\n\t\t<li><a href=\"#\" rel=\"external\" class=\"linkedin\"><span class=\"wb-inv\">LinkedIn: </span>NomLinkedIn</a></li>\n\t</ul>\n</section>"
+					}
+				]
+			}
+		},
+		{
+			"@id": "_:implement_follow",
+			"iteration": "_:iteration_follow_2",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Refer to the below code sample."
+				],
+				"fr": [
+					"Référez-vous à l'exemple de code ci-dessous."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample:",
+						"code": "<section class=\"followus\">\n\t<h2>Follow:</h2>\n\t<ul>\n\t\t<li><a href=\"#facebook\" class=\"facebook wb-lbx\"><span class=\"wb-inv\">Facebook</span></a></li>\n\t\t<li><a href=\"#\" class=\"twitter\" rel=\"external\"><span class=\"wb-inv\">Twitter</span></a></li>\n\t\t<li><a href=\"#youtube\" class=\"youtube wb-lbx\"><span class=\"wb-inv\">YouTube</span></a></li>\n\t\t<li><a href=\"#\" class=\"flickr\" rel=\"external\"><span class=\"wb-inv\">Flickr</span></a></li>\n\t\t<li><a href=\"#\" class=\"pinterest\" rel=\"external\"><span class=\"wb-inv\">Pinterest</span></a></li>\n\t\t<li><a href=\"#\" class=\"linkedin\" rel=\"external\"><span class=\"wb-inv\">LinkedIn</span></a></li>\n\t\t<li><a href=\"#\" class=\"instagram\" rel=\"external\"><span class=\"wb-inv\">Instagram</span></a></li>\n\t\t<li><a href=\"#\" class=\"rss\" rel=\"external\"><span class=\"wb-inv\">RSS Feed</span></a></li>\n\t\t<li><a href=\"#\" class=\"email\" rel=\"external\"><span class=\"wb-inv\">Email subscription</span></a></li>\n\t\t<li><a href=\"#\" class=\"periscope\" rel=\"external\"><span class=\"wb-inv\">Periscope</span></a></li>\n\t</ul>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code :",
+						"code": "<section class=\"followus\">\n\t<h2>Suivez :</h2>\n\t<ul>\n\t\t<li><a href=\"#facebook\" class=\"facebook wb-lbx\"><span class=\"wb-inv\">Facebook</span></a></li>\n\t\t<li><a href=\"#\" class=\"twitter\" rel=\"external\"><span class=\"wb-inv\">Twitter</span></a></li>\n\t\t<li><a href=\"#youtube\" class=\"youtube wb-lbx\"><span class=\"wb-inv\">YouTube</span></a></li>\n\t\t<li><a href=\"#\" class=\"flickr\" rel=\"external\"><span class=\"wb-inv\">Flickr</span></a></li>\n\t\t<li><a href=\"#\" class=\"pinterest\" rel=\"external\"><span class=\"wb-inv\">Pinterest</span></a></li>\n\t\t<li><a href=\"#\" class=\"linkedin\" rel=\"external\"><span class=\"wb-inv\">LinkedIn</span></a></li>\n\t\t<li><a href=\"#\" class=\"instagram\" rel=\"external\"><span class=\"wb-inv\">Instagram</span></a></li>\n\t\t<li><a href=\"#\" class=\"rss\" rel=\"external\"><span class=\"wb-inv\">Fil RSS</span></a></li>\n\t\t<li><a href=\"#\" class=\"email\" rel=\"external\"><span class=\"wb-inv\">Abonnement par courriel</span></a></li>\n\t\t<li><a href=\"#\" class=\"periscope\" rel=\"external\"><span class=\"wb-inv\">Periscope</span></a></li>\n\t</ul>\n</section>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_gc_follow_3",
+			"name": "GC Follow us - Iteration 3",
+			"date": "2024-07",
+			"detectableBy": ".gc-followus",
+			"additions": [
+				"New link for more ways to connect."
+			]
+		},
+		{
+			"@id": "_:iteration_gc_follow_2",
+			"name": "GC Follow us - Iteration 2",
+			"date": "2024-02",
+			"detectableBy": ".gc-followus",
+			"additions": [
+				"New SVG image for X logo (formerly known as Twitter)."
+			],
+			"fixes": [
+				"Deprecated: SVG image for Twitter to be deprecated."
+			],
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "includes/gc-follow-us.html"
+					}
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_gc_follow_1",
+			"name": "GC Follow us - Iteration 1",
+			"date": "2021-08",
+			"detectableBy": ".gc-followus"
+		},
+		{
+			"@id": "_:iteration_follow_2",
+			"name": "Follow us - Iteration 2",
+			"date": "2024-02",
+			"detectableBy": ".followus",
+			"additions": [
+				"New Base64 image for X logo (formerly known as Twitter).",
+				"Added logic to dynamically replace \"Twitter\" with \"X\" in hidden text."
+			],
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "includes/follow.html"
+					}
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_follow_1",
+			"name": "Follow us - Iteration 1",
+			"date": "2017-04",
+			"detectableBy": ".followus",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "includes/follow.html"
+					}
+				}
+			]
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_gc_follow",
+			"name": "GC Follow us",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_gc_follow_1",
+			"detectableBy": ".gc-followus",
+			"layout": [
+				"Default: the social media accounts are stacked vertically with each account having the logo on the left and name on the right.",
+				"Inline: the social media accounts are listed horizontally with only the logo visible."
+			],
+			"semantic": "section.gc-followus > h2 + (ul > li > a)",
+			"static": [
+				"Dans les médias sociaux",
+				"On social media"
+			],
+			"schema": [
+				"FacebookAccountName",
+				"FacebookAccountURL",
+				"TwitterAccountName",
+				"TwitterAccountURL",
+				"YoutubeAccountName",
+				"YoutubeAccountURL",
+				"InstagramAccountName",
+				"InstagramAccountURL",
+				"LinkedInAccountName",
+				"LinkedInAccountURL"
+			],
+			"configuration": "isInline: if yes, add class \"list-inline\" to <ul> element.",
+			"include": {
+				"@type": "source-code",
+				"collapsed": true,
+				"description": "Include with logic in Liquid.",
+				"code": {
+					"@type": [ "@id", "rdf:HTML" ],
+					"@value": "includes/gc-follow-us.html"
+				}
+			}
+		},
+		{
+			"@id": "_:cs_follow",
+			"name": "Follow us",
+			"status": "deprecated",
+			"deprecatedOn": "2024-02-02",
+			"baseOnIteration": "_:iteration_follow_1",
+			"detectableBy": ".followus",
+			"layout": [
+				"The social media accounts are listed horizontally. The logo visible. The account name is invisible."
+			],
+			"semantic": "section.followus > h2 + (ul > li > a)",
+			"static": [
+				"Suivez :",
+				"Follow:"
+			],
+			"schema": [
+				"FacebookAccountName",
+				"FacebookAccountURL",
+				"TwitterAccountName",
+				"TwitterAccountURL",
+				"YoutubeAccountName",
+				"YoutubeAccountURL",
+				"InstagramAccountName",
+				"InstagramAccountURL",
+				"LinkedInAccountName",
+				"LinkedInAccountURL",
+				"FlickrAccountName",
+				"FlickrAccountURL",
+				"PinterestAccountName",
+				"PinterestAccountURL",
+				"RSSAccountName",
+				"RSSAccountURL",
+				"EmailAccountName",
+				"EmailAccountURL",
+				"PeriscopeAccountName",
+				"PeriscopeAccountURL"
+			],
+			"include": {
+				"@type": "source-code",
+				"collapsed": true,
+				"description": "Include with logic in Liquid.",
+				"code": {
+					"@type": [ "@id", "rdf:HTML" ],
+					"@value": "includes/follow.html"
+				}
+			}
+		}
+	]
 }
 ,{
 	"@context": {
@@ -225,30 +1165,407 @@
 		"modified": "dct:modified"
 	},
 	"title": {
-		"en": "Most requested - Documentation and working example",
-		"fr": "En demande - Documentation et example pratique"
+		"en": "Minister or institutional head",
+		"fr": "Ministre ou chef d’institution"
+	},
+	"description": {
+		"en": "This component is for the minister or institutional head pattern on the institutional landing page.",
+		"fr": "Ce composant est destiné au modèle du ministre ou du chef d'institution sur la page d'accueil de l'institution."
+	},
+	"modified": "2024-03-11",
+	"componentName": "gc-minister",
+	"status": "stable",
+	"version": "1.0",
+	"pages": {
+		"examples": [
+			{
+				"title": "Minister or institutional head",
+				"language": "en",
+				"path": "gc-minister-en.html"
+			},
+			{
+				"title": "Ministre ou chef d’institution",
+				"language": "fr",
+				"path": "gc-minister-fr.html"
+			},
+			{
+				"title": "Minister or institutional head - two ministers example",
+				"language": "en",
+				"path": "gc-minister-two-ministers-en.html"
+			},
+			{
+				"title": "Ministre ou chef d'institution - exemple avec deux ministres",
+				"language": "fr",
+				"path": "gc-minister-two-ministers-fr.html"
+			},
+			{
+				"title": "Minister or institutional head - special cases example",
+				"language": "en",
+				"path": "gc-minister-special-cases-en.html"
+			},
+			{
+				"title": "Ministre ou chef d'institution - cas particuliers",
+				"language": "fr",
+				"path": "gc-minister-special-cases-fr.html"
+			}
+		],
+		"docs": [
+			{
+				"title": "Minister or institutional head",
+				"language": "en",
+				"path": "gc-minister-doc-en.html"
+			},
+			{
+				"title": "Ministre ou chef d’institution",
+				"language": "fr",
+				"path": "gc-minister-doc-fr.html"
+			}
+		]
+	},
+	"a11yGuidance": "No accessibility guidance.",
+	"variations": [
+		{
+			"name": {
+				"en": "Minister or institutional head - default",
+				"fr": "Ministre ou chef d’institution - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "This component is for the minister or institutional head pattern on the institutional landing page.",
+				"fr": "Ce composant est destiné au modèle du ministre ou du chef d'institution sur la page d'accueil de l'institution."
+			},
+			"guidance": {
+				"en": "https://design.canada.ca/mandatory-templates/institutional-profile-pages.html",
+				"fr": "https://conception.canada.ca/modeles-obligatoire/pages-profil-institutionnel.html"
+			},
+			"iteration": "_:iteration_minister_1",
+			"example": [
+				{
+					"en": { "href": "gc-minister-en.html", "text": "Minister or institutional head" },
+					"fr": { "href": "gc-minister-fr.html", "text": "Ministre ou chef d’institution" }
+				},
+				{
+					"en": { "href": "gc-minister-two-ministers-en.html", "text": "Minister or institutional head - two ministers example" },
+					"fr": { "href": "gc-minister-two-ministers-fr.html", "text": "Ministre ou chef d'institution - exemple avec plusieurs ministres" }
+				},
+				{
+					"en": { "href": "gc-minister-special-cases-en.html", "text": "Minister or institutional head - special cases example" },
+					"fr": { "href": "gc-minister-special-cases-fr.html", "text": "Ministre ou chef d'institution - cas particuliers" }
+				}
+			],
+			"implementation": [
+				"_:implement_minister"
+			],
+			"history": [
+				{
+					"en": "March 2024 - Initial implementation of the variation.",
+					"fr": "Mars 2024 - Implémentation initiale de la variante."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_minister",
+			"iteration": "_:iteration_minister_1",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"The following coded example is the default layout. When you are implementing your instance, you can omit any of the following:<ul><li>image</li><li>mandate letter link</li><li>briefing book link</li></ul>",
+					"The <code>&lt;div class=\"col-md-6\"></code> can be repeated as many times as there are ministers or institutional heads.",
+					"Refer to the official guidance for the appropriate section heading."
+				],
+				"fr": [
+					"L'exemple codé suivant est la présentation par défaut. Lorsque vous mettez en œuvre votre instance, vous pouvez omettre les éléments suivants&nbsp;:<ul><li>Image</li><li>Lettre de mandat</li><li>Dossier d’information</li></ul>",
+					"Le <code>&lt;div class=\"col-md-6\"></code> peut être répété autant de fois qu'il y a de ministres ou de chefs d'institution.",
+					"Reportez-vous aux directives officielles pour connaître le titre de section approprié."
+				]
+			},
+			"notes": {
+				"en": [
+					"The recommended image size is 200px by 250px."
+				],
+				"fr": [
+					"La taille d'image recommandée est de 200px par 250px."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample with image:",
+						"code": "<section class=\"gc-minister\">\n\t<h2>Minister</h2>\n\t<div class=\"row wb-eqht-grd\">\n\t\t<div class=\"col-xs-12 col-md-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-xs-12 col-md-7 pull-right\">\n\t\t\t\t\t<h3><a href=\"#\">The Honourable [Minister name]</a></h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-5\">\n\t\t\t\t\t<img src=\"[image url]\" alt=\"The Honourable [Minister name]\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-7\">\n\t\t\t\t\t<p>[Official title]</p>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li><a href=\"\">Mandate letter</a></li>\n\t\t\t\t\t\t<li><a href=\"\">Briefing book</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+					},
+					{
+						"@type": "source-code",
+						"description": "Code sample without image:",
+						"code": "<section class=\"gc-minister\">\n\t<h2>Minister</h2>\n\t<div class=\"row wb-eqht-grd\">\n\t\t<div class=\"col-xs-12 col-md-6\">\n\t\t\t<h3><a href=\"#\">The Honourable [Minister 3 name]</a></h3>\n\t\t\t<p>[Official title]</p>\n\t\t\t<ul>\n\t\t\t\t<li><a href=\"\">Mandate letter</a></li>\n\t\t\t\t<li><a href=\"\">Briefing book</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code avec image :",
+						"code": "<section class=\"gc-minister\">\n\t<h2>Ministre</h2>\n\t<div class=\"row wb-eqht-grd\">\n\t\t<div class=\"col-xs-12 col-md-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-xs-12 col-md-7 pull-right\">\n\t\t\t\t\t<h3><a href=\"#\">L'honorable [prénom et nom de famille]</a></h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-5\">\n\t\t\t\t\t<img src=\"[url de l'image]\" alt=\"L'honorable [prénom et nom de famille]\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-7\">\n\t\t\t\t\t<p>[Titre officiel du ministre]</p>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li><a href=\"\">Lettre de mandat</a></li>\n\t\t\t\t\t\t<li><a href=\"\">Dossier d'information</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+					},
+					{
+						"@type": "source-code",
+						"description": "Exemple de code sans image :",
+						"code": "<section class=\"gc-minister\">\n\t<h2>Ministre</h2>\n\t<div class=\"row wb-eqht-grd\">\n\t\t<div class=\"col-xs-12 col-md-6\">\n\t\t\t<h3><a href=\"#\">The Honourable [Minister 3 name]</a></h3>\n\t\t\t<p>[Titre officiel du ministre]</p>\n\t\t\t<ul>\n\t\t\t\t<li><a href=\"\">Lettre de mandat</a></li>\n\t\t\t\t<li><a href=\"\">Dossier d'information</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</section>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_minister_1",
+			"name": "Minister - Iteration 1",
+			"date": "2024-03",
+			"detectableBy": ".gc-minister",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample with image",
+					"code": "<section class=\"gc-minister\">\n\t<h2>Minister</h2>\n\t<div class=\"row wb-eqht-grd\">\n\t\t<div class=\"col-xs-12 col-md-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-xs-12 col-md-7 pull-right\">\n\t\t\t\t\t<h3><a href=\"#\">The Honourable [Minister name]</a></h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-5\">\n\t\t\t\t\t<img src=\"[image url]\" alt=\"The Honourable [Minister name]\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-7\">\n\t\t\t\t\t<p>[Official title]</p>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li><a href=\"\">Mandate letter</a></li>\n\t\t\t\t\t\t<li><a href=\"\">Briefing book</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+				},
+				{
+					"@type": "source-code",
+					"description": "Code sample without image",
+					"code": "<section class=\"gc-minister\">\n\t<h2>Minister</h2>\n\t<div class=\"row wb-eqht-grd\">\n\t\t<div class=\"col-xs-12 col-md-6\">\n\t\t\t<h3><a href=\"#\">The Honourable [Minister 3 name]</a></h3>\n\t\t\t<p>[Official title]</p>\n\t\t\t<ul>\n\t\t\t\t<li><a href=\"\">Mandate letter</a></li>\n\t\t\t\t<li><a href=\"\">Briefing book</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</section>"
+				}
+			]
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_minister",
+			"name": "Minister or institutional head",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_minister_1",
+			"detectableBy": ".gc-minister",
+			"layout": "Each minister takes up half the container. The image (if available) is on the left",
+			"semantic": "section ((h3 a) + img + p + (ul > li))",
+			"style": "The image has a thin grey border.",
+			"context": "To be used in the institutional landing page template.",
+			"schema": [
+				"Section title (type: STRING) - for example: Minister, President, Parliamentary secretary, Associate minister, Ombudsman, Management",
+				"Ministers (type: ARRAY)",
+				"Ministers > Name (type: STRING)",
+				"Ministers > Title (type: STRING)",
+				"Ministers > Page URL (type: STRING)",
+				"Ministers > Image URL (type: STRING)",
+				"Ministers > Mandate letter text (type: STRING)",
+				"Ministers > Mandate letter URL (type: STRING)",
+				"Ministers > Briefing book text (type: STRING)",
+				"Ministers > Briefing book URL (type: STRING)"
+			],
+			"mediaConsiderations": "Recommended image size: 200x250px."
+		}
+	]
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Most requested",
+		"fr": "En demande"
 	},
 	"description": {
 		"en": "Features top tasks related to the page it is on.",
 		"fr": "Comprend des tâches principales liées à la page sur laquelle elles se trouvent."
 	},
-	"modified": "2021-05-20",
+	"modified": "2024-02-14",
 	"componentName": "gc-most-requested",
-	"status": "provisional",
+	"status": "stable",
+	"version": "1.0",
 	"pages": {
+		"docs": [
+			{
+				"title": "Most requested - Documentation",
+				"language": "en",
+				"path": "gc-most-requested-doc-en.html"
+			},
+			{
+				"title": "En demande - Documentation",
+				"language": "fr",
+				"path": "gc-most-requested-doc-fr.html"
+			}
+		],
 		"examples": [
 			{
-				"title": "Most requested - Documentation and working example",
+				"title": "Most requested",
 				"language": "en",
 				"path": "gc-most-requested-en.html"
 			},
-		{
+			{
 				"title": "En demande",
 				"language": "fr",
-				"path": "gc-most-requested-fr.html - Documentation et example pratique"
+				"path": "gc-most-requested-fr.html"
+			},
+			{
+				"title": "Most requested - bad implementation",
+				"language": "en",
+				"path": "gc-most-requested-bad-en.html"
+			},
+			{
+				"title": "En demande - mauvaise implémentation",
+				"language": "fr",
+				"path": "gc-most-requested-bad-fr.html"
 			}
 		]
-	}
+	},
+	"a11yGuidance": "No accessibility guidance.",
+	"variations": [
+		{
+			"name": {
+				"en": "Most requested - default",
+				"fr": "En demande - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "Features top tasks related to the page it is on.",
+				"fr": "Comprend des tâches principales liées à la page sur laquelle elles se trouvent."
+			},
+			"guidance": {
+				"en": "https://design.canada.ca/common-design-patterns/most-requested.html",
+				"fr": "https://conception.canada.ca/configurations-conception-communes/en-demande.html"
+			},
+			"iteration": "_:iteration_mostrequested_1",
+			"example": [
+				{
+					"en": { "href": "gc-most-requested-en.html", "text": "Most requested" },
+					"fr": { "href": "gc-most-requested-fr.html", "text": "En demande" }
+				},
+				{
+					"en": { "href": "gc-most-requested-bad-en.html", "text": "Most requested - bad implementation" },
+					"fr": { "href": "gc-most-requested-bad-fr.html", "text": "En demande - mauvaise implémentation" }
+				}
+			],
+			"implementation": [
+				"_:implement_mostrequested"
+			],
+			"history": [
+				{
+					"en": "February 2024 - Initial implementation of the variation.",
+					"fr": "Février 2024 - Implémentation initiale de la variante."
+				},
+				{
+					"en": "June 2021 - Provisional implementation of the variation.",
+					"fr": "Juin 2021 - Implémentation provisionnelle de la variante."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_mostrequested",
+			"iteration": "_:iteration_mostrequested_1",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Refer to the code sample below.",
+					"The component cannot be located inside another element with the class <code>container</code>."
+				],
+				"fr": [
+					"Référez-vous au code qui suit.",
+					"La composante ne peut pas être située à l'intérieur d'un autre élément avec la classe <code>container</code>."
+				]
+			},
+			"notes": {
+				"en": [
+					"The Most requested component on the home page is out of scope of this component."
+				],
+				"fr": [
+					"La composante En demande sur la page d'accueil est exclue de cette composante."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample:",
+						"code": "<section class=\"gc-most-requested\">\n\t<div class=\"container\">\n\t\t<h2>Most requested</h2>\n\t\t<ul>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 1]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 2]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 3]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 4]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 5]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 6]</a></li>\n\t\t</ul>\n\t</div>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code&nbsp;:",
+						"code": "<section class=\"gc-most-requested\">\n\t<div class=\"container\">\n\t\t<h2>En demande</h2>\n\t\t<ul>\n\t\t\t<li><a href=\"#\">[Lien vers une tâche principale 1]</a></li>\n\t\t\t<li><a href=\"#\">[Lien vers une tâche principale 2]</a></li>\n\t\t\t<li><a href=\"#\">[Lien vers une tâche principale 3]</a></li>\n\t\t\t<li><a href=\"#\">[Lien vers une tâche principale 4]</a></li>\n\t\t\t<li><a href=\"#\">[Lien vers une tâche principale 5]</a></li>\n\t\t\t<li><a href=\"#\">[Lien vers une tâche principale 6]</a></li>\n\t\t</ul>\n\t</div>\n</section>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_mostrequested_1",
+			"name": "Most requested - Iteration 1",
+			"date": "2024-02",
+			"detectableBy": ".gc-most-requested:not(.provisional)",
+			"predecessor": "_:iteration_mostrequested_0",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"gc-most-requested\">\n\t<div class=\"container\">\n\t\t<h2>Most requested</h2>\n\t\t<ul>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 1]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 2]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 3]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 4]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 5]</a></li>\n\t\t\t<li><a href=\"#\">[Top task hyperlink 6]</a></li>\n\t\t</ul>\n\t</div>\n</section>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_mostrequested_0",
+			"name": "Most requested - Provisional",
+			"date": "2021-06",
+			"detectableBy": ".provisional.gc-most-requested",
+			"successor": "_:iteration_mostrequested_1"
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_mostrequested",
+			"name": "Most requested",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_mostrequested_1",
+			"detectableBy": ".gc-most-requested",
+			"layout": "On smaller screens, the title is on the top and links are stacked. On medium and larger, the title is on the left and links are distributed over two columns from left to right and top to bottom.",
+			"style": "The component has a light gray background.",
+			"semantic": "h2 + (ul > li > a)",
+			"static": [
+				"Most requested",
+				"En demande"
+			],
+			"context": "The component must not be located inside an element with the class \"container\"",
+			"schema": [
+				"arrays of 'MostRequestedLink'",
+				"'MostRequestedLink' object: [ \"task links\", \"task names\" ]"
+			],
+			"test": [
+				"<a href=\"gc-most-requested-provisional-en.html\">Most-requested (provisional)</a>"
+			]
+		}
+	]
 }
 ,{
 	"@context": {
@@ -266,35 +1583,234 @@
 		"en": "Used to present sets of links with accompanying descriptions.",
 		"fr": "Utilisé pour présenter des ensembles de liens accompagnés de descriptions."
 	},
-	"modified": "2023-09-06",
-	"componentName": "gc-servinfo",
+	"modified": "2024-07-26",
+	"componentName": "gc-srvinfo",
 	"status": "stable",
+	"version": "3.1",
 	"pages": {
 		"examples": [
 			{
 				"title": "Services and information",
 				"language": "en",
-				"path": "gc-srvinfo-examples.html"
+				"path": "gc-srvinfo-en.html"
 			},
-		{
-				"title": "Services et information (en anglais seulement)",
+			{
+				"title": "Services et renseignements",
 				"language": "fr",
-				"path": "gc-srvinfo-examples.html"
+				"path": "gc-srvinfo-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Accessibility assessment #1 - services and information",
+				"language": "en",
+				"path": "reports/ally-1-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #1 - Services et information",
+				"language": "fr",
+				"path": "reports/ally-1-fr.html"
 			}
 		],
 		"docs": [
 			{
 				"title": "Services and information",
 				"language": "en",
-				"path": "gc-srvinfo.html"
+				"path": "gc-srvinfo-doc-en.html"
 			},
-		{
-				"title": "Services et information (en anglais seulement)",
+			{
+				"title": "Services et renseignements",
 				"language": "fr",
-				"path": "gc-srvinfo.html"
+				"path": "gc-srvinfo-doc-fr.html"
 			}
 		]
-	}
+	},
+	"a11yGuidance": "No accessibility guidance.",
+	"variations": [
+		{
+			"name": {
+				"en": "Services and information - default",
+				"fr": "Services et renseignements - par défaut"
+			},
+			"status": "stable",
+			"description": {
+				"en": "Used to present sets of links with accompanying descriptions over 3 columns on large screens.",
+				"fr": "Utilisé pour présenter des ensembles de liens accompagnés de descriptions sur 3 colonnes sur les grands écrans."
+			},
+			"guidance": {
+				"en": "https://design.canada.ca/common-design-patterns/services-information.html",
+				"fr": "https://conception.canada.ca/configurations-conception-communes/services-renseignements.html"
+			},
+			"iteration": "_:iteration_srvinfo_3",
+			"example": [
+				{
+					"en": { "href": "gc-srvinfo-en.html", "text": "Services and information" },
+					"fr": { "href": "gc-srvinfo-fr.html", "text": "Services et renseignements" }
+				}
+			],
+			"implementation": [
+				"_:implement_srvinfo"
+			],
+			"history": [
+				{
+					"en": "July 2024 - Added example with invisible header.",
+					"fr": "Juillet 2024 - Ajout de l'exemple avec en-tête invisible."
+				},
+				{
+					"en": "February 2024 - Added .gc-srvinfo CSS class.",
+					"fr": "Février 2024 - Ajout de la classe CSS .gc-srvinfo."
+				},
+				{
+					"en": "September 2017 - Removed CSS class .gcdrmt and removed details/summary when more than 10 services and information.",
+					"fr": "Septembre 2017 - Suppression de la classe CSS .gcdrmt et suppression des détails/résumé lorsqu'il y a plus de 10 services et informations."
+				},
+				{
+					"en": "August 2016 - Separated column layout from section delimiter.",
+					"fr": "Août 2016 - Disposition des colonnes séparées du délimiteur de section."
+				},
+				{
+					"en": "April 2016 - Added .gcdrmt CSS class. Limit to 10 visible services and information with details/summary to show more.",
+					"fr": "Avril 2016 - Ajout de la classe CSS .gcdrmt. Limite de 10 services et renseignements visibles avec \"details/summary\" pour en afficher plus."
+				},
+				{
+					"en": "August 2014 - Initial implementation of the variation.",
+					"fr": "Août 2014 - Implémentation initiale de la variante."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_srvinfo",
+			"iteration": "_:iteration_srvinfo_3",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is meant for developers/publishers adding the component manually.",
+				"fr": "Cette implémentation est destinée aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					"Refer to the code sample below."
+				],
+				"fr": [
+					"Référez-vous au code qui suit."
+				]
+			},
+			"notes": {
+				"en": [
+					"For code samples of the different layouts possible (ordered list, vertical, etc.), refer to the working examples."
+				],
+				"fr": [
+					"Pour des extraits de code des différentes mises en page possibles (liste ordonnée, verticale, etc.), reportez-vous aux exemples pratiques."
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"collapsed": true,
+						"description": "Code sample for 3 columns layout",
+						"code": "<section class=\"gc-srvinfo\">\n\t<h2>Services and information</h2>\n\t<div class=\"wb-eqht row\">\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t</div>\n</section>"
+					},
+					{
+						"@type": "source-code",
+						"collapsed": true,
+						"description": "Code sample for 2 columns layout",
+						"code": "<section class=\"gc-srvinfo\">\n\t<h2>Services and information</h2>\n\t<div class=\"wb-eqht row\">\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t</div>\n</section>"
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"collapsed": true,
+						"description": "Exemple de code pour la disposition sur 3 colonnes",
+						"code": "<section class=\"gc-srvinfo\">\n\t<h2>Services et renseignements</h2>\n\t<div class=\"wb-eqht row\">\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t</div>\n</section>"
+					},
+					{
+						"@type": "source-code",
+						"collapsed": true,
+						"description": "Exemple de code pour la disposition sur 2 colonnes",
+						"code": "<section class=\"gc-srvinfo\">\n\t<h2>Services et renseignements</h2>\n\t<div class=\"wb-eqht row\">\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<h3><a href=\"#\">[Texte de l'hyperlien]</a></h3>\n\t\t\t<p>Utilisez des verbes d'action, ou inscrivez simplement des mots clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>\n\t\t</div>\n\t</div>\n</section>"
+					}
+				]
+			}
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_srvinfo_5",
+			"name": "Services and information - Iteration 5",
+			"date": "2018-09",
+			"detectableBy": ".gc-srvinfo",
+			"predecessor": "_:iteration_srvinfo_4",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section class=\"gc-srvinfo\">\n\t<h2>Services and information</h2>\n\t<div class=\"wb-eqht row\">\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t\t<div class=\"col-md-6 col-lg-4\">\n\t\t\t<h3><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t<p>Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>\n\t\t</div>\n\t</div>\n</section>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_srvinfo_4",
+			"name": "Services and information - Iteration 4",
+			"date": "2017-12",
+			"detectableBy": ".wb-eqht.row>[class*=col-]>section>(h3.h5>a)+p",
+			"predecessor": "_:iteration_srvinfo_3",
+			"successor": "_:iteration_srvinfo_5",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample",
+					"code": "<section>\n\t<h2>Services and information</h2>\n\t<div class=\"wb-eqht row\">\n\t\t<div class=\"col-md-6\">\n\t\t\t<section>\n\t\t\t\t<h3 class=\"h5\"><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t\t<p>[Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to]</p>\n\t\t\t</section>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<section>\n\t\t\t\t<h3 class=\"h5\"><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t\t<p>[Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to]</p>\n\t\t\t</section>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<section>\n\t\t\t\t<h3 class=\"h5\"><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t\t<p>[Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to]</p>\n\t\t\t</section>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<section>\n\t\t\t\t<h3 class=\"h5\"><a href=\"#\">[Hyperlink text]</a></h3>\n\t\t\t\t<p>[Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to]</p>\n\t\t\t</section>\n\t\t</div>\n\t</div>\n</section>"
+				}
+			]
+		},
+		{
+			"@id": "_:iteration_srvinfo_3",
+			"name": "Services and information - Iteration 3",
+			"date": "2016-08",
+			"detectableBy": "section.gc-drmt:not([class*=col-])",
+			"predecessor": "_:iteration_srvinfo_2",
+			"successor": "_:iteration_srvinfo_4"
+		},
+		{
+			"@id": "_:iteration_srvinfo_2",
+			"name": "Services and information - Iteration 2",
+			"date": "2016-04",
+			"detectableBy": "section.gc-drmt[class*=col-]",
+			"predecessor": "_:iteration_srvinfo_1",
+			"successor": "_:iteration_srvinfo_3"
+		},
+		{
+			"@id": "_:iteration_srvinfo_1",
+			"name": "Services and information - Iteration 1",
+			"date": "2014-08",
+			"detectableBy": "section.col-md-6>(h3.h5>a)+p",
+			"successor": "_:iteration_srvinfo_2"
+		}
+	],
+	"changesets": [
+		{
+			"@id": "_:cs_srvinfo",
+			"name": "Services and information",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_srvinfo_5",
+			"detectableBy": ".gc-srvinfo",
+			"layout": "The (h3>a)+p pattern is either inside a grid layout of two or three columns, in an ordered list, or directly one after the other vertically.",
+			"semantic": "h2 + (h2 > a) + p",
+			"schema": [
+				"service and information title",
+				"array of objects containing the following properties: { \"service link\", \"service name\", \"service description\" }"
+			],
+			"style": "Each column within the same row must have the same height"
+		}
+	]
 }
 ,{
 	"@context": {
@@ -479,7 +1995,7 @@
 		"en": "A simple CSS solution to turn tables into responsive cards for smaller windows.",
 		"fr": "Une solution CSS simple pour transformer les tables en cartes réactives pour des fenêtres plus petites."
 	},
-	"modified": "2023-09-05",
+	"modified": "2024-03-28",
 	"componentName": "gc-table",
 	"status": "provisional",
 	"todos": [
@@ -496,6 +2012,28 @@
 				"title": "Tableaux",
 				"language": "fr",
 				"path": "gc-table-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Accessibility assessment #6 - GC tables",
+				"language": "en",
+				"path": "reports/a11y-6-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #6 - Tableaux GC",
+				"language": "fr",
+				"path": "reports/a11y-6-fr.html"
+			},
+			{
+				"title": "Accessibility assessment #7 - GC tables",
+				"language": "en",
+				"path": "reports/a11y-7-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #7 - Tableaux GC",
+				"language": "fr",
+				"path": "reports/a11y-7-fr.html"
 			}
 		]
 	}
@@ -564,6 +2102,40 @@
 				"title": "Entête well responsive",
 				"language": "fr",
 				"path": "well-header-rwd-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Images",
+		"fr": "Images"
+	},
+	"description": {
+		"en": "Apply WET-BOEW simple styles or modify an image without use of editing software.",
+		"fr": "Appliquez les styles simples WET-BOEW ou modifiez une image sans utiliser de logiciel d'édition."
+	},
+	"modified": "2023-07-12",
+	"componentName": "images",
+	"status": "stable",
+	"pages": {
+		"examples": [
+			{
+				"title": "Images",
+				"language": "en",
+				"path": "images-en.html"
+			},
+			{
+				"title": "Images",
+				"language": "fr",
+				"path": "images-fr.html"
 			}
 		]
 	}
@@ -672,7 +2244,7 @@
 		"en": "Labels including all various states.",
 		"fr": "Étiquettes comprenant tous les différents états."
 	},
-	"modified": "2023-07-11",
+	"modified": "2024-03-28",
 	"componentName": "labels",
 	"processing": "baseline",
 	"status": "stable",
@@ -687,6 +2259,28 @@
 				"title": "Étiquettes",
 				"language": "fr",
 				"path": "labels-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Accessibility assessment #8 - Labels",
+				"language": "en",
+				"path": "reports/a11y-8-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #8 - Étiquettes",
+				"language": "fr",
+				"path": "reports/a11y-8-fr.html"
+			},
+			{
+				"title": "Accessibility assessment #9 - Labels",
+				"language": "en",
+				"path": "reports/a11y-9-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #9 - Étiquettes",
+				"language": "fr",
+				"path": "reports/a11y-9-fr.html"
 			}
 		]
 	}
@@ -741,42 +2335,42 @@
 		"en": "Transforms a simple form into a conversation like experience used as a wizard.",
 		"fr": "Conversation suggestive"
 	},
-	"modified": "2020-08-18",
+	"modified": "2024-12-05",
 	"componentName": "wb-chtwzrd",
-	"status": "provisional",
+	"status": "deprecated",
 	"pages": {
 		"examples": [
 			{
 				"title": "Chat wizard",
 				"language": "en",
-				"path": "chatwizard-en.html"
+				"path": "../../méli-mélo/deprecated/chatwizard/chatwizard-en.html"
 			},
 			{
 				"title": "Conversation suggestive",
 				"language": "fr",
-				"path": "chatwizard-fr.html"
+				"path": "../../méli-mélo/deprecated/chatwizard/chatwizard-fr.html"
 			},
 			{
 				"title": "with JSON setting",
 				"language": "en",
-				"path": "chatwizard-json-en.html"
+				"path": "../../méli-mélo/deprecated/chatwizard/chatwizard-json-en.html"
 			},
 			{
 				"title": "avec une configuration JSON",
 				"language": "fr",
-				"path": "chatwizard-json-fr.html"
+				"path": "../../méli-mélo/deprecated/chatwizard/chatwizard-json-fr.html"
 			}
 		],
 		"docs": [
 			{
 				"title": "Chat wizard",
 				"language": "en",
-				"path": "docs.html"
+				"path": "../../méli-mélo/deprecated/chatwizard/docs.html"
 			},
 		{
 				"title": "Chat wizard (en anglais seulement)",
 				"language": "fr",
-				"path": "docs.html"
+				"path": "../../méli-mélo/deprecated/chatwizard/docs.html"
 			}
 		],
 		"related": [
@@ -789,62 +2383,6 @@
 				"title": "2019-15 Research documenation (en anglais seulement)",
 				"language": "fr",
 				"url": "https://wet-boew.github.io/wet-boew-documentation/research/2019-15-exploration-chat-pattern.html"
-			}
-		]
-	}
-}
-,{
-	"@context": {
-		"@version": 1.1,
-		"dct": "http://purl.org/dc/terms/",
-		"title": { "@id": "dct:title", "@container": "@language" },
-		"description": { "@id": "dct:description", "@container": "@language" },
-		"modified": "dct:modified"
-	},
-	"title": {
-		"en": "Data JSON",
-		"fr": "Data JSON"
-	},
-	"description": {
-		"en": "Insert content extracted from a JSON file.",
-		"fr": "Insertion de contenu extrait d'un fichier JSON"
-	},
-	"modified": "2022-08-25",
-	"componentName": "wb-data-json",
-	"status": "stable",
-	"pages": {
-		"examples": [
-			{
-				"title": "Data JSON",
-				"language": "en",
-				"url": "https://wet-boew.github.io/wet-boew/demos/wb-data-json/data-json-en.html"
-			},
-			{
-				"title": "Data JSON",
-				"language": "fr",
-				"url": "https://wet-boew.github.io/wet-boew/demos/wb-data-json/data-json-fr.html"
-			},
-			{
-				"title": "Template HTML 5",
-				"language": "en",
-				"url": "https://wet-boew.github.io/gcweb-compiled-demos/wetboew-demos/wb-data-json/template-en.html"
-			},
-			{
-				"title": "Gabarit HTML 5",
-				"language": "fr",
-				"url": "https://wet-boew.github.io/gcweb-compiled-demos/wetboew-demos/wb-data-json/template-fr.html"
-			}
-		],
-		"docs": [
-			{
-				"title": "Data JSON",
-				"language": "en",
-				"url": "https://wet-boew.github.io/wet-boew/docs/ref/wb-data-json/wb-data-json-en.html"
-			},
-			{
-				"title": "Data JSON",
-				"language": "fr",
-				"url": "https://wet-boew.github.io/wet-boew/docs/ref/wb-data-json/wb-data-json-en.html"
 			}
 		]
 	}
@@ -1000,62 +2538,6 @@
 		"modified": "dct:modified"
 	},
 	"title": {
-		"en": "JSON Manager",
-		"fr": "Gestionnaire JSON"
-	},
-	"description": {
-		"en": "Manage dataset and apply JSON Patch",
-		"fr": "Gérer des jeux de données et applique des correctifs JSON."
-	},
-	"modified": "2022-08-25",
-	"componentName": "wb-jsonmanager",
-	"status": "stable",
-	"pages": {
-		"examples": [
-			{
-				"title": "JSON Manager",
-				"language": "en",
-				"url": "https://wet-boew.github.io/wet-boew/demos/wb-jsonmanager/jsonmanager-en.html"
-			},
-			{
-				"title": "Gestionnaire JSON",
-				"language": "fr",
-				"url": "https://wet-boew.github.io/wet-boew/demos/wb-jsonmanager/jsonmanager-fr.html"
-			},
-			{
-				"title": "with Do Action patches",
-				"language": "en",
-				"path": "jsonmanager-doaction-en.html"
-			},
-			{
-				"title": "avec l'exécuteur d'action de patches",
-				"language": "fr",
-				"path": "jsonmanager-doaction-fr.html"
-			}
-		],
-		"docs": [
-			{
-				"title": "JSON Manager",
-				"language": "en",
-				"url": "https://wet-boew.github.io/wet-boew/docs/ref/wb-jsonmanager/wb-jsonmanager-en.html"
-			},
-			{
-				"title": "Gestionnaire JSON",
-				"language": "fr",
-				"url": "https://wet-boew.github.io/wet-boew/docs/ref/wb-jsonmanager/wb-jsonmanager-fr.html"
-			}
-		]
-	}
-}
-,{
-	"@context": {
-		"@version": 1.1,
-		"dct": "http://purl.org/dc/terms/",
-		"title": { "@id": "dct:title", "@container": "@language" },
-		"description": { "@id": "dct:description", "@container": "@language" },
-		"modified": "dct:modified"
-	},
-	"title": {
 		"en": "Datalist dynamic suggestion",
 		"fr": "Suggestion interative avec un datalist"
 	},
@@ -1198,52 +2680,6 @@
 				"language": "fr",
 				"path": "wb5-click-postback-fr.html"
 			}
-		]
-	}
-}
-,{
-	"@context": {
-		"@version": 1.1,
-		"dct": "http://purl.org/dc/terms/",
-		"title": { "@id": "dct:title", "@container": "@language" },
-		"description": { "@id": "dct:description", "@container": "@language" },
-		"modified": "dct:modified"
-	},
-	"title": {
-		"en": "Well bold",
-		"fr": "Boîte grise en gras"
-	},
-	"description": {
-		"en": "This apply font weight bold to evey text element inside a well component and generates normal font weight when the element <code>strong</code> is applied.",
-		"fr": "Ceci applique la propriété gras comme poid de police de caractère à chacun des éléments d'un composant well et applique un poid de police de caractère normal lorsque l'élément <code>strong</code> est appliqué."
-	},
-	"modified": "2022-04-28",
-	"componentName": "well-bold",
-	"status": "stable",
-	"pages": {
-		"examples": [
-			{
-				"title": "Well bold - working example",
-				"language": "en",
-				"path": "well-bold-en.html"
-			},
-			{
-				"title": "Boîte grise en gras - example pratique",
-				"language": "fr",
-				"path": "well-bold-fr.html"
-			}
-		],
-		"docs": [
-		{
-			"title": "Well bold",
-			"language": "en",
-			"path": "well-bold-doc-en.html"
-		},
-		{
-			"title": "Boîte grise en gras",
-			"language": "fr",
-			"path": "well-bold-doc-fr.html"
-		}
 		]
 	}
 }

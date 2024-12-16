@@ -12,7 +12,6 @@
 .home {
 
 	h1 {
-		border-bottom-width: 4px;
 		font-weight: 500;
 		margin-top: 10px;
 	}
@@ -46,19 +45,10 @@
 		margin-top: 3px;
 	}
 
-	/* Home page banner
-	 *
-	 * Reference in:
-	 * - components/_screen-xxs-max
-	 * - components/_screen-xs-min-to-screen-xs-max
-	 * - components/_screen-md-min-to-screen-md-max
-	 * - components/_screen-md-max
-	 * - components/_screen-lg-min
-	 */
+	/* Home page banner */
 	.header-rwd {
-		margin: 2em 0px;
+		margin: 1em 0px;
 	}
-
 
 	/* Home page Most requested section
 	 *
@@ -85,5 +75,23 @@
 		background-position: right center;
 		background-repeat: no-repeat;
 		background-size: 38%;
+	}
+
+	// All services button under services and information
+	.gc-srvinfo .container > p:last-child {
+		margin-bottom: 20px;
+		margin-top: 20px;
+
+		.btn-all-services {
+			border: 2px solid $accent-blue; // #26374a
+			color: $accent-blue; // #26374a
+			font-size: 1.1em;
+			font-weight: bold;
+			padding: .65em 1.1em;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

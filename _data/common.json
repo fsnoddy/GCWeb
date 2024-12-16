@@ -30,6 +30,18 @@
 				"language": "fr",
 				"path": "ajax-fetch-fr.html"
 			}
+		],
+		"reports": [
+			{
+				"title": "Pre Accessibility assessment #1 - AJAX Fetch",
+				"language": "en",
+				"path": "reports/pre-a11y-1-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité préliminaire #1 - Récupération de ressource via Ajax",
+				"language": "fr",
+				"path": "reports/pre-a11y-1-fr.html"
+			}
 		]
 	}
 }
@@ -64,6 +76,18 @@
 				"title": "Alertes",
 				"language": "fr",
 				"path": "alerts-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Accessibility assessment #1 - Alert",
+				"language": "en",
+				"path": "reports/a11y-1-en.html"
+			},
+			{
+				"title": "Évaluation de l'accessibilité #1 - Alert",
+				"language": "fr",
+				"path": "reports/a11y-1-fr.html"
 			}
 		]
 	}
@@ -133,6 +157,28 @@
 				"title": "Boutons",
 				"language": "fr",
 				"path": "button-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Accessibility assessment #3 - Buttons",
+				"language": "en",
+				"path": "reports/a11y-3-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #3 - Boutons",
+				"language": "fr",
+				"path": "reports/a11y-3-fr.html"
+			},
+			{
+				"title": "Accessibility assessment #4 - Buttons",
+				"language": "en",
+				"path": "reports/a11y-4-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #4 - Boutons",
+				"language": "fr",
+				"path": "reports/a11y-4-fr.html"
 			}
 		]
 	}
@@ -212,6 +258,83 @@
 				"title": "Liste groupé",
 				"language": "fr",
 				"path": "list-group-fr.html"
+			},
+			{
+				"title": "Custom list styling using parent div element",
+				"language": "en",
+				"path": "lists-mws-en.html"
+			},
+			{
+				"title": "Style de liste personnalisé à l'aide de l'élément div parent",
+				"language": "fr",
+				"path": "lists-mws-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Main Container",
+		"fr": "Conteneur Principal"
+	},
+	"description": {
+		"en": "Main Container with alternate tags.",
+		"fr": "Conteneur principal avec des balises alternatives."
+	},
+	"modified": "2023-07-05",
+	"componentName": "main-container",
+	"processing": "baseline",
+	"status": "stable",
+	"pages": {
+		"examples": [
+			{
+				"title": "Main Container",
+				"language": "en",
+				"path": "maincontainer-en.html"
+			},
+			{
+				"title": "Conteneur Principal",
+				"language": "fr",
+				"path": "maincontainer-fr.html"
+			},
+			{
+				"title": "Main Container with article",
+				"language": "en",
+				"path": "maincontainer-article-en.html"
+			},
+			{
+				"title": "Conteneur Principal avec article",
+				"language": "fr",
+				"path": "maincontainer-article-fr.html"
+			},
+			{
+				"title": "Main Container with section",
+				"language": "en",
+				"path": "maincontainer-section-en.html"
+			},
+			{
+				"title": "Conteneur Principal avec section",
+				"language": "fr",
+				"path": "maincontainer-section-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Pre Accessibility assessment #1 - Main Container",
+				"language": "en",
+				"path": "reports/pre-a11y-1-en.html"
+			},
+			{
+				"title": "Pre Assessment d'accessibilité #1 - Conteneur Principal",
+				"language": "fr",
+				"path": "reports/pre-a11y-1-fr.html"
 			}
 		]
 	}
@@ -232,7 +355,7 @@
 		"en": "HTML elements used as is.",
 		"fr": "Les éléments HTML utilisé tel quel."
 	},
-	"modified": "2023-02-21",
+	"modified": "2024-03-28",
 	"componentName": "scaffolding",
 	"processing": "baseline",
 	"status": "stable",
@@ -247,6 +370,16 @@
 				"title": "Formulaires",
 				"language": "fr",
 				"path": "formulaires.html"
+			},
+			{
+				"title": "Text level semantics",
+				"language": "en",
+				"path": "text-level-semantics.html"
+			},
+			{
+				"title": "Sémantique au niveau du texte",
+				"language": "fr",
+				"path": "texte-niveau-semantique.html"
 			}
 		],
 		"reports": [
@@ -259,6 +392,36 @@
 				"title": "Évaluation d'accessibilité #1 - Visibilité du focus",
 				"language": "fr",
 				"path": "reports/a11y-1-fr.html"
+			},
+			{
+				"title": "Text level semantics - Full Accessibility assessment",
+				"language": "en",
+				"path": "reports/ally-assess-1-en.html"
+			},
+			{
+				"title": "Texte de niveau sémantique - Évaluation d'accessibilité complète",
+				"language": "fr",
+				"path": "reports/ally-assess-1-fr.html"
+			},
+			{
+				"title": "Accessibility assessment #2 - Forms",
+				"language": "en",
+				"path": "reports/a11y-2-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #2 - Formulaires",
+				"language": "fr",
+				"path": "reports/a11y-2-fr.html"
+			},
+			{
+				"title": "Accessibility assessment #3 - Forms",
+				"language": "en",
+				"path": "reports/a11y-3-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité #3 - Formulaires",
+				"language": "fr",
+				"path": "reports/a11y-3-fr.html"
 			}
 		]
 	}
@@ -323,6 +486,40 @@
 }
 ,{
 	"@context": {
+		"@version": 2.0,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Spacing",
+		"fr": "Espacement"
+	},
+	"description": {
+		"en": "Utility classes to add spacing between elements.",
+		"fr": "Classes utilitaires pour ajouter de l'espacement entre des éléments."
+	},
+	"modified": "2024-11-22",
+	"componentName": "spacing",
+	"status": "stable",
+	"pages": {
+		"examples": [
+			{
+				"title": "Spacing",
+				"language": "en",
+				"path": "spacing-en.html"
+			},
+			{
+				"title": "Espacement",
+				"language": "fr",
+				"path": "spacing-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
 		"@version": 1.1,
 		"dct": "http://purl.org/dc/terms/",
 		"title": { "@id": "dct:title", "@container": "@language" },
@@ -365,6 +562,40 @@
 		"modified": "dct:modified"
 	},
 	"title": {
+		"en": "Text-level Modifiers",
+		"fr": "Modificateurs de niveau texte"
+	},
+	"description": {
+		"en": "Text-level modifiers for styling and formatting",
+		"fr": "Modificateurs de niveau texte pour le style et le formatage"
+	},
+	"modified": "2024-11-25",
+	"componentName": "text-level-modifiers",
+	"status": "stable",
+	"pages": {
+		"examples": [
+			{
+				"title": "Text-level modifiers",
+				"language": "en",
+				"path": "text-level-modifiers-en.html"
+			},
+			{
+				"title": "Modificateurs de niveau texte",
+				"language": "fr",
+				"path": "text-level-modifiers-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
 		"en": "Basic HTML",
 		"fr": "HTML simplifiée"
 	},
@@ -387,6 +618,18 @@
 				"title": "HTML simplifié",
 				"language": "fr",
 				"path": "wb-disable-fr.html"
+			}
+		],
+		"reports": [
+			{
+				"title": "Pre-accessibility assessment #1 - Basic HTML Mode",
+				"language": "en",
+				"path": "reports/pre-ally-1-en.html"
+			},
+			{
+				"title": "Assessment d'accessibilité préliminaire #1 - HTML simplifié",
+				"language": "fr",
+				"path": "reports/pre-ally-1-fr.html"
 			}
 		]
 	}

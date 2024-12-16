@@ -67,20 +67,22 @@ var componentName = "wb-chtwzrd",
 	 * @param {jQuery Event} event Event that triggered the function call
 	 */
 	init = function( event ) {
+		setTimeout( function() {
 
-		// Start initialization
-		// returns DOM object = proceed with init
-		// returns undefined = do not proceed with init (e.g., already initialized)
-		var elm = wb.init( event, componentName, selector ),
-			$elm;
-		if ( elm ) {
-			$elm = $( elm );
+			// Start initialization
+			// returns DOM object = proceed with init
+			// returns undefined = do not proceed with init (e.g., already initialized)
+			var elm = wb.init( event, componentName, selector ),
+				$elm;
+			if ( elm ) {
+				$elm = $( elm );
 
-			fireChtwzrd( $elm );
+				fireChtwzrd( $elm );
 
-			// Identify that initialization has completed
-			wb.ready( $elm, componentName );
-		}
+				// Identify that initialization has completed
+				wb.ready( $elm, componentName );
+			}
+		}, 500 );
 	},
 
 	/**

@@ -1,7 +1,7 @@
 ---
 title: GCWeb, le thème WET-BOEW de Canada.ca
 altLangPage: index-en.html
-dateModified: 2023-12-12
+dateModified: 2024-12-09
 description: "Page d'accueil décrivant l'ensemble des composants du thème de Canada.ca, nommé GCWeb."
 layout: no-container
 language: fr
@@ -20,7 +20,7 @@ css:
 			<p>Les gabarits et les conceptions communes si dessous sont une référence d'implémentation du <a href="https://conception.canada.ca">Système de conception de Canada.ca</a>, incluant les exigences obligatoire de la spécifications du contenu et de l’architecture de l'information (C&amp;AI) pour Canada.ca. Les ministères et organisme du gouvernement du Canada peuvent y contribuer en publiant leur modèle et leur conception commune via le <a href="https://github.com/wet-boew/GCWeb">dépôt github de GCWeb</a>.</p>
 		</div>
 		<div class="col-xs-12 col-md-auto pull-right">
-			<p><a href="https://github.com/wet-boew/GCWeb/archive/v14.2.0.zip" class="btn btn-primary">Télécharger le thème <strong>GCWeb v14.2.0</strong></a><br />
+			<p><a href="https://github.com/wet-boew/GCWeb/archive/v16.0.0.zip" class="btn btn-primary">Télécharger le thème <strong>GCWeb v16.0.0</strong></a><br />
 				<small>(<time>{{ page.dateModified | date: '%F' }}</time> - <a href="https://github.com/wet-boew/gcweb/releases/latest">Note de version</a>)</small></p>
 		</div>
 	</div>
@@ -34,7 +34,7 @@ css:
 					<li><a href="#composantes"><span aria-hidden="true" class="fas fa-cube mrgn-rght-md"></span>Composantes</a></li>
 					<li><a href="#gabarits"><span aria-hidden="true" class="fas fa-table mrgn-rght-md"></span>Gabarits</a></li>
 					<li><a href="#modeles"><span aria-hidden="true" class="fas fa-th-large mrgn-rght-md"></span>Configurations de conception</a></li>
-					<li><a href="#experimentation"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-md"></span>Méli-mélo et thématiques</a></li>
+					<li><a href="#experimentation"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-md"></span>Expérimentation et thématiques</a></li>
 					<li><a href="#sitesglobal"><span aria-hidden="true" class="fas fa-globe mrgn-rght-md"></span>Fonctionnalités globales et de sites</a></li>
 					<li><a href="#wetboew"><span aria-hidden="true" class="fas fa-cube mrgn-rght-md"></span>Wet-boew</a></li>
 					<li><a href="#autre"><span aria-hidden="true" class="fas fa-info-circle mrgn-rght-md"></span>Autre documentation</a></li>
@@ -59,7 +59,7 @@ css:
 			<a href="#modeles" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-th-large mrgn-rght-sm"></span>Configurations de conception</a>
 		</li>
 		<li class="mrgn-lft-md">
-			<a href="#experimentation" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-sm"></span>Méli-mélo et thématiques</a>
+			<a href="#experimentation" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-puzzle-piece mrgn-rght-sm"></span>Expérimentation et thématiques</a>
 		</li>
 		<li class="mrgn-lft-md">
 			<a href="#sitesglobal" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-globe mrgn-rght-sm"></span>Global et de sites</a>
@@ -288,17 +288,7 @@ css:
 		{% assign list-pages = designPattern.pages %}
 		<li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
 			<div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
-				<h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">{{ designPattern.title[ page.language ] }}
-				{% if designPattern.status == "stable" %}
-				<span class="label label-success mrgn-lft-sm"><span class="wb-inv">État: </span>{{ comp_status[ designPattern.status ] }}</span>
-				{% elsif designPattern.status == "provisional" %}
-				<span class="label label-warning mrgn-lft-sm"><span class="wb-inv">État: </span>{{ comp_status[ designPattern.status ] }}</span>
-				{% elsif designPattern.status == "deprecated" %}
-				<span class="label label-danger mrgn-lft-sm"><span class="wb-inv">État: </span>{{ comp_status[ designPattern.status ] }}</span>
-				{% else %}
-				<span class="label label-default mrgn-lft-sm"><span class="wb-inv">État: </span>Undefined</span>
-				{% endif %}
-				</h3>
+				<h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">{{ designPattern.title[ page.language ] }}</h3>
 				<div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
 					<p>{{ designPattern.description[ page.language ] | default: "[Short description of the design pattern]" }}</p>
 					<!--
@@ -378,9 +368,9 @@ css:
 				<h2 id="experimentation" class="mrgn-tp-md mrgn-bttm-0">Fonctionnalités spéciales</h2>
 					<div class="row">
 					    <div class="col-md-6">
-					    	<h3 id="méli-mélo">Méli-mélo</h3>
-						<p>L'espace d'expérimentation que vous attendiez&nbsp;! Les Méli-mélos permettent d'ajouter au thème de Canada.ca du nouveau code intéressant que vous considéreriez habituellement comme "personnalisé".</p>
-						<p class="mrgn-tp-lg"><a href="méli-mélo/méli-mélo-fr.html" class="btn btn-default btn-lg">En savoir plus<span class="wb-inv"> sur les méli-mélos</span></a></p>
+					    	<h3 id="méli-mélo">Expérimentation</h3>
+						<p>L'espace d'expérimentation que vous attendiez&nbsp;! Les compilation méli-mélos qui contenant le code expérimental permettent d'ajouter au thème de Canada.ca du nouveau code intéressant que vous considéreriez habituellement comme "personnalisé".</p>
+						<p class="mrgn-tp-lg"><a href="méli-mélo/méli-mélo-fr.html" class="btn btn-default btn-lg">En savoir plus<span class="wb-inv"> sur les expérimentations</span></a></p>
 					    </div>
 					    <div class="col-md-6">
 						<h3 id="thematiques">Thématiques promotionnelles</h3><p>Avez-vous un ensemble de pages qui arborent un look original relié à une promotion spécifique&nbsp;? Dans ce cas, essayez plutôt cet espace de thématiques promotionnelles.</p>
